@@ -1,0 +1,115 @@
+.cite-map {
+    &-section {
+        padding: 3.7rem 0 4rem 0;
+        @media (max-width: $sw-sm-max) {
+            padding: 5rem 0 4.5rem 0;
+        }
+        @media (max-width: $sw-xs-max) {
+            padding: 4.1rem 0 4.9rem 0;
+        }
+    }
+    &__topic {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        margin-bottom: 4.8rem;
+        @media (max-width: $sw-sm-max) {
+            margin-bottom: 4.1rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 3.6rem;
+        }
+    }
+    &__title {
+        margin-right: 2rem;
+        @media (max-width: $sw-sm-max) {
+            margin-right: 0;
+        }
+    }
+    &__subtitle {
+        margin-bottom: 4.2rem;
+        @media (max-width: $sw-sm-max) {
+            margin-bottom: 3.7rem;
+        }
+    }
+    &__close {
+        cursor: pointer;
+        transition: color .3s ease;
+        color: $grey;
+        top: -3px;      
+        position: relative;
+        @media (max-width: $sw-sm-max) {
+            display: none;
+        }
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark;
+            }
+        }
+        .icon-close {
+            font-size: 3rem;
+        }
+    }
+    &__links {
+        width: 100%;
+        column-count: 3;
+        column-gap: 3.9rem;
+        margin-bottom: 3.4rem;
+        @media (max-width: $sw-sm-max) {
+            column-gap: 2.1rem;
+            margin-bottom: 2.6rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            column-count: 1;
+        }
+    }
+    &__link {
+        font-size: 1.6rem;
+        line-height: 1.45;
+        margin-bottom: 1.7rem;
+        color: $blue;
+        display: inline-flex;
+        vertical-align: top;
+        width: 100%;
+        @media (max-width: $sw-xs-max) {
+            line-height: 1.5;
+            margin-bottom: 1.6rem;
+        }
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark;
+            }
+        }
+    }
+    &__providers {
+        margin-bottom: 2.7rem;
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 3.5rem;
+        }
+        &__wrap {
+            column-count: 3;
+            column-gap: 3.9rem;
+            @media (max-width: $sw-sm-max) {
+                column-gap: 2.1rem;
+            }
+            @media (max-width: $sw-xs-max) {
+                column-count: 1;
+            }
+        }
+        &__link {
+            font-size: 1.6rem;
+            line-height: 1.45;
+            margin-bottom: 1.7rem;
+            color: $blue;
+            display: inline-flex;
+            vertical-align: top;
+            width: 100%;
+            &:hover {
+                @media (min-width: $sw-sm-min) {
+                    color: $dark;
+                }
+            }
+        }
+    }
+}

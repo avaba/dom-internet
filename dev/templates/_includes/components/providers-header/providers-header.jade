@@ -1,0 +1,25 @@
+mixin providers-header(data)
+	header.header
+		.container
+			.header__inner
+				a.providers-arrow__link(href="javascript:void(0)")
+					+svg('icon-arrow')
+					span Все провайдеры Санкт-Петербург
+	.providers__top-block
+		.container
+			.providers__top-block__inner
+				.providers__top-block__logo
+					img(src="s/images/useful/providers/#{data.img}", alt="logo")
+				.providers__top-block__side
+					.providers__top-block__city
+						span Ваш город Санкт-Петербург
+					.providers__top-block__contact-phone
+						+svg('icon-phone-mobile')
+						.providers__top-block__contact-phone__content
+							span Номер подключения
+							a(href="tel:88002000000") 8 800 200 0000
+					.providers__top-block__contact-phone
+						+svg('icon-phone-mobile')
+						.providers__top-block__contact-phone__content
+							span Техподдержка
+							a(href="tel:88002000000") 8 800 200 0000

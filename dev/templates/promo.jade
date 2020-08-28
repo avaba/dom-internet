@@ -1,0 +1,25 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/section-promos/section-promos
+include _includes/components/contact-phone/contact-phone
+
+block head
+	+head({'title':'Акции'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+hero-component({
+		hero_class: 'hero-sm',
+		img: 'img5', 
+		title: 'Акции провайдеров в Санкт&#8209;Петербурге',
+		secondary: 'Экономим ваше время при выборе провайдера. Просто введите адрес и получите список лучших предложений, доступных для вашего дома',
+		button_class: 'btn_blue',
+		submit_text: 'Найти',
+		placeholder: 'Введите ваш адрес'
+	})
+	+section-promos()
+	+contact-phone()

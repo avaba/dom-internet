@@ -1,0 +1,45 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/providers-list/providers-list
+include _includes/components/providers-selection/providers-selection
+include _includes/components/section-collapse/section-collapse
+include _includes/components/contact-phone/contact-phone
+
+block head
+	+head({'title':'О Нас'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+hero-component({
+		hero_class: 'hero-sm',
+		img: 'img6', 
+		title: 'О сервисе dominternet.ru',
+		secondary: 'Экономим ваше время при выборе провайдера. Просто введите адрес и получите список лучших предложений, доступных для вашего дома'
+	})
+	+section-collapse()
+	+providers-selection({
+		items: [
+			{
+				icon: 'icon-address',
+				title: 'Проверка по адресу',
+				text: 'Подскажем, какие провайдеры подключены к вашему дому.'
+			},
+			{
+				icon: 'icon-time',
+				title: 'Экономия времени',
+				text: 'Поможем за 7 минут выбрать подходящего для вас оператора'
+			},
+			{
+				icon: 'icon-person',
+				title: 'Персональный подход',
+				text: 'Подберём выгодный тариф с учетом ваших пожеланий'
+			}
+		]
+	})
+	+section-collapse()
+	+providers-list({title: 'Наши партнеры'})
+	+contact-phone()

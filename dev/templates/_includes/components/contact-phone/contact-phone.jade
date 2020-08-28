@@ -1,0 +1,9 @@
+mixin contact-phone(data)
+	.contact-phone
+		.container
+			.contact-phone__inner
+				p.contact-phone__title Удобнее подобрать тариф по телефону? #[br] Звоните!
+				a.contact-phone__link(href="tel:88002004050")
+					+svg('icon-phone')
+					+svg('icon-phone-mobile')
+					span 8 800 200-40-50

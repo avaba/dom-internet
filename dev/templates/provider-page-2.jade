@@ -1,0 +1,80 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/providers-selection/providers-selection
+include _includes/components/section-collapse/section-collapse
+include _includes/components/contact-phone/contact-phone
+include _includes/components/request-form/request-form
+include _includes/components/section-filters/section-filters
+include _includes/components/section-tariffs/section-tariffs
+include _includes/components/comparison-block/comparison-block
+include _includes/components/providers-header/providers-header
+
+block head
+	+head({'title':'Страница провайдера 2'})
+
+block body
+	body.provider-2
+		.l-wrapper
+			+providers-header({img: 'ttk.png'})
+			main
+				block content
+					+hero-component({
+						hero_class: 'hero-sm',
+						img: 'img3', 
+						title: 'Подключите домашний интернет и <br> телевидение от Ростелеком в <br> Санкт&#8209;Петербурге',
+						button_class: 'btn_blue',
+						submit_text: 'Подключить',
+						placeholder: 'Введите ваш адрес'
+					})
+					+section-tariffs({
+						providers: false,
+						title: false,
+						inner_title: '15 тарифов',
+						tariffs: [
+							{
+								target: '#tariff_first',
+								id: 'tariff_first'
+							},
+							{
+								target: '#tariff_second',
+								id: 'tariff_second'
+							},
+							{
+								target: '#tariff_third',
+								id: 'tariff_third'
+							},
+							{
+								target: '#tariff_fourth',
+								id: 'tariff_fourth'
+							}
+						]
+					})
+					+request-form()
+					+providers-selection({
+						items: [
+							{
+								icon: 'icon-address',
+								title: 'Проверка по адресу',
+								text: 'Подскажем, какие провайдеры подключены к вашему дому.'
+							},
+							{
+								icon: 'icon-time',
+								title: 'Экономия времени',
+								text: 'Поможем за 7 минут выбрать подходящего для вас оператора'
+							},
+							{
+								icon: 'icon-person',
+								title: 'Персональный подход',
+								text: 'Подберём выгодный тариф с учетом ваших пожеланий'
+							}
+						]
+					})
+					+contact-phone()
+					+section-collapse()
+			+footer()
+		block beforescripts
+			+comparison-block()
+			
+		script(src=route.js + "main.js")

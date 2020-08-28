@@ -1,0 +1,18 @@
+mixin remind-form(data)
+	.remind-form
+		.container
+			.remind-form__inner
+				.section-title__wrap
+					h2.section-title Напомним о подключении
+					p.section-subtitle Задайте дату завершения вашего текущего тарифа и мы напомним напоминание
+				form.remind-form__item.js-form-check(action="javascript:void(0)")
+					.form-control__wrap
+						.input-wrap.required
+							input.form-control(type="email", required, name="user_mail")
+							span.form-control__placeholder Электронная почта
+					.form-control__wrap.form-control__date__wrap
+						.input-wrap.required
+							input.form-control.form-control__date(type="date", required, name="user_date")
+							span.form-control__placeholder Дата завершения
+					button.btn.btn_shadowed.btn_md.btn_lgh.btn_blue(type="submit")
+						span Напомнить

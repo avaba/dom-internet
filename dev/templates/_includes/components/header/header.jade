@@ -1,0 +1,75 @@
+mixin header(data)
+	header.header
+		.container
+			.header__inner
+				button.header__menu-trigger(type="button")
+					+svg('icon-burger')
+				a.header__logo(href="javascript:void(0)") Dom#[span Internet].ru
+				.city__choose
+					button(type="button").city__choose__trigger #[+svg('icon-location')] Санкт-Петербург #[+svg('icon-chevron-sm')]
+					.city__choose__dropdown
+						span Ваш город Санкт-Петербург?
+						.city__choose__links
+							button.city_confirm(type="button").btn.btn_blue 
+								span Да
+							a(href="javascript:void(0)") Нет, выбрать
+				ul.header__list.h-reset-list
+					li.active
+						a(href="javascript:void(0)") Тарифы
+					li
+						a(href="javascript:void(0)") Провайдеры
+					li
+						a(href="javascript:void(0)") Обзоры
+					li
+						a(href="javascript:void(0)") Акции
+				if data.call
+					a.header__call(href="tel:9999999999")
+						+svg('icon-phone-mobile')
+				if data.close
+					button.header__close-trigger(type="button")
+						+svg('icon-close')
+				button.header__search-trigger(type="button")
+					+svg('icon-search')
+
+		+search-field()
+	+header-menu()
+
+mixin header-menu(data)
+	.header__menu
+		.header__menu__top
+			button.header__menu-trigger(type="button")
+				+svg('icon-burger')
+			a.header__logo(href="javascript:void(0)") Dom#[span Internet].ru
+			.city__choose
+				button(type="button").city__choose__trigger #[+svg('icon-location')] Санкт-Петербург #[+svg('icon-chevron-sm')]
+				.city__choose__dropdown
+					span Ваш город Санкт-Петербург?
+					.city__choose__links
+						button.city_confirm(type="button").btn.btn_blue 
+							span Да
+						a(href="javascript:void(0)") Нет, выбрать
+			a.header__call(href="tel:9999999999")
+				+svg('icon-phone-mobile')
+		nav.header__list-wrap
+			ul.header__list.h-reset-list
+				li.active
+					a(href="javascript:void(0)") Тарифы
+				li
+					a(href="javascript:void(0)") Провайдеры
+				li.tariff-choose
+					a(href="javascript:void(0)") Подобрать тариф с помощью оператора
+				li
+					a(href="javascript:void(0)") Обзоры
+				li
+					a(href="javascript:void(0)") Акции
+				li
+					a(href="javascript:void(0)") Поиск
+mixin search-field(data)
+	.search-field
+		.container
+			.search-field__inner
+				.search-field__icon
+					+svg('icon-search')
+				input.search-field__input(type="text", placeholder="Поиск")
+				button.search-field__close(type="button")
+					+svg('icon-close')

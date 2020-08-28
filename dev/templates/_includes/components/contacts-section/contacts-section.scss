@@ -1,0 +1,53 @@
+.contacts {
+    &-section {
+        padding: 9.7rem 0 0 0;
+        @media (max-width: $sw-sm-max) {
+            padding: 9.7rem 0 5.1rem 0;
+        }
+        .container {
+            @media (max-width: $sw-xs-max) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+    }
+    &__info {
+        margin-bottom: 9.4rem;
+        padding-left: 9.3rem;
+        @media (max-width: $sw-sm-max) {
+            padding-left: 5.7rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+        &__block {
+            margin-bottom: 5.1rem;
+            &.block-schedule {
+                margin-bottom: 3.4rem;
+            }
+            p {
+                font-size: 1.8rem;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+            a {
+                color: $dark;
+                &:hover {
+                    @media (min-width: $sw-sm-min) {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    &__map {
+        .map-wrapper {
+            width: 100%;
+            height: 44rem;
+            @media (max-width: $sw-sm-max) {
+                height: 35.6rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+
+mixin head(data)
+	- var project_mame = 'Dom Internet'
+		unless (data)
+			- var data = {}
+	head
+		// page name
+		title=data.title ? project_mame + ' | ' + data.title : ' | New page'
+		// Required meta tags
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+		// Optional styles
+		//- link(href='https://fonts.googleapis.com/css?family=Lato:400,700&display=swap&subset=latin-ext', rel='stylesheet')
+		link(href='s/css/all.css', rel='stylesheet')

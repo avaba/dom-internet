@@ -1,0 +1,12 @@
+extends _includes/_extends/main
+
+include _includes/components/search-result-section/search-result-section
+
+block head
+	+head({'title':'Поиск'})
+
+block header
+	+header({call: false, close: true})
+
+block content
+	+search-result-section()

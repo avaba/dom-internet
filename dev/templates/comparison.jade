@@ -1,0 +1,12 @@
+extends _includes/_extends/main
+
+include _includes/components/comparison-section/comparison-section
+
+block head
+	+head({'title':'Сравнение'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+comparison-section()

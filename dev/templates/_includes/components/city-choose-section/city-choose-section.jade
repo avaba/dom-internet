@@ -1,0 +1,176 @@
+mixin city-choose-section(data)
+	.city-choose-section
+		.container
+			.city-choose__top
+				h1.city-choose__title Выберите город
+				button.city-choose__all-regions(type="button")
+					span Все регионы
+					+svg('icon-chevron-sm')
+				button.city-choose__close(type="button")
+					+svg('icon-close')
+			.city-choose__search
+				.form-control__wrap
+					.input-wrap
+						+svg('icon-search')
+						input.form-control(type="text", name="city_search")
+						span.form-control__placeholder Поиск
+				.city-choose__key-letter
+					a.key-letter__item.active(href="jvascript:void(0)") Все
+					a.key-letter__item(href="jvascript:void(0)") А
+					a.key-letter__item(href="jvascript:void(0)") Б
+					a.key-letter__item(href="jvascript:void(0)") В
+					a.key-letter__item(href="jvascript:void(0)") Г
+					a.key-letter__item(href="jvascript:void(0)") Е
+					a.key-letter__item(href="jvascript:void(0)") И
+					a.key-letter__item(href="jvascript:void(0)") Й
+					a.key-letter__item(href="jvascript:void(0)") К
+					a.key-letter__item(href="jvascript:void(0)") Л
+					a.key-letter__item(href="jvascript:void(0)") М
+					a.key-letter__item(href="jvascript:void(0)") Н
+					a.key-letter__item(href="jvascript:void(0)") О
+					a.key-letter__item(href="jvascript:void(0)") П
+					a.key-letter__item(href="jvascript:void(0)") Р
+					a.key-letter__item(href="jvascript:void(0)") С
+					a.key-letter__item(href="jvascript:void(0)") Т
+					a.key-letter__item(href="jvascript:void(0)") У
+					a.key-letter__item(href="jvascript:void(0)") Х
+					a.key-letter__item(href="jvascript:void(0)") Ч
+					a.key-letter__item(href="jvascript:void(0)") Э
+					a.key-letter__item(href="jvascript:void(0)") Ю
+					a.key-letter__item(href="jvascript:void(0)") Я
+			.city-choose__main-cities
+				ul.main-cities__list.h-reset-list
+					li
+						a(href="javascirpt:void(0)") Москва
+					li
+						a(href="javascirpt:void(0)") Санкт-Петербург
+			.city-choose__cities
+				ul.cities__list.h-reset-list
+					li
+						.cities__list__letter
+							span А
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Б
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span В
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Г
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Д
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Е
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Ж
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span З
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span И
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span К
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Л
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span М
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Н
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span О
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span П
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань
+					li
+						.cities__list__letter
+							span Р
+						.cities__list__inner
+							a(href="jvascript:void(0)") Абакан
+							a(href="jvascript:void(0)") Анадырь
+							a(href="jvascript:void(0)") Архангельск
+							a(href="jvascript:void(0)") Астрахань

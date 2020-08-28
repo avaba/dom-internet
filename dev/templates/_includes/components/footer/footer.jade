@@ -1,0 +1,33 @@
+mixin footer()
+	footer.footer
+		.container
+			.footer__inner
+				.footer__side
+					.city__choose
+						button(type="button").city__choose__trigger #[+svg('icon-location')] Санкт-Петербург #[+svg('icon-chevron-sm')]
+						.city__choose__dropdown
+							span Ваш город Санкт-Петербург?
+							.city__choose__links
+								button.city_confirm(type="button").btn.btn_blue 
+									span Да
+								a(href="javascript:void(0)") Нет, выбрать
+					p Соглашение об обработке персональных данных
+				.footer__side
+					nav.footer__list-wrap
+						ul.footer__list.h-reset-list
+							li.active
+								a(href="javascript:void(0)") Тарифы
+							li
+								a(href="javascript:void(0)") Провайдеры
+							li
+								a(href="javascript:void(0)") Обзоры
+							li
+								a(href="javascript:void(0)") Провайдеры по адресу
+							li
+								a(href="javascript:void(0)") Контакты
+							li
+								a(href="javascript:void(0)") О нас
+							li
+								a(href="javascript:void(0)") Стать партнером
+							li
+								a(href="javascript:void(0)") Карта сайта

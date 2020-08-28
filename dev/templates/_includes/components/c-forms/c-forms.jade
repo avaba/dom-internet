@@ -1,0 +1,64 @@
+mixin form-group(data)
+
+	//- validate arguments and set defaults
+	unless (data)
+		- var data = {}
+		//-
+	- var custom_class = data.custom_class ? data.custom_class : null
+	- var form_group_class = data.form_group_class ? data.form_group_class : null
+	- var label_class = data.label_class ? data.label_class : null
+	- var placeholder = data.placeholder ? data.placeholder : null
+	- var required = data.required ? data.required : null
+	- var disabled = data.disabled ? data.disabled : null
+	- var checked = data.checked ? data.checked : null
+	- var title = data.title ? data.title : null
+	- var value = data.value ? data.value : ''
+	- var label = data.label ? data.label : ''
+	- var type = data.type ? data.type : null
+	- var name = data.name ? data.name : null
+	- var id = data.id ? data.id : null
+
+	//- build form group
+	.form-group
+		case type
+			when 'select'
+				.select-wrap
+					select.selectpicker(class=custom_class, title=title, id=id, disabled=disabled)
+						each option in data.options
+							option(selected=option.selected ? 'selected' : null, data-content!=option.content ? option.content : null)=option.txt
+			when 'contenteditable'
+				.input-wrap
+					if (data.icon)
+						i.ico(class=data.icon)
+					if (data.svg)
+						+svg(data.svg)
+					textarea.hidden-input(class=custom_class, name=name, placeholder=placeholder, required=required, id=id, disabled=disabled)!=value
+					.form-control(class=custom_class, contenteditable="true", required=required, disabled=disabled, data-placeholder=placeholder)!=value
+			when 'textarea'
+				.input-wrap
+					if (data.icon)
+						i.ico(class=data.icon)
+					if (data.svg)
+						+svg(data.svg)
+					textarea.form-control(class=custom_class, name=name, placeholder=placeholder, required=required, id=id, disabled=disabled)!=value
+			when 'checkbox'
+				label.checkbox-label(class=label_class)
+					input.hidden-input(class=custom_class, type=type, name=name, required=required, checked=checked, value=value, disabled=disabled)
+					span.check-icon
+					span.check-value!=value
+			when 'radio'
+				label.radio-label(class=label_class)
+					input.hidden-input(class=custom_class, type=type, name=name, required=required, checked=checked, value=value, disabled=disabled)
+					span.check-icon
+					span.check-value!=value
+			when null
+			when ''
+			default
+				.input-wrap
+					if (data.icon)
+						i.ico(class=data.icon)
+					if (data.svg)
+						+svg(data.svg)
+					if (data.clear_btn)
+						button.field_clear_btn(type="button")
+					input.form-control(class=custom_class, type=type, name=name, placeholder=placeholder, value=value, required=required, id=id, disabled=disabled)

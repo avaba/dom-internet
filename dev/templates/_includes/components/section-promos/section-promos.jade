@@ -1,0 +1,39 @@
+mixin section-promos(data)
+	.section-promos
+		.container
+			.section-title__wrap
+				h2.section-title Найдено 2 акции от 12 партнеров
+			.section-promos__inner
+				+promo-block({target: '#promo1', id: 'promo1'})
+				+promo-block({target: '#promo2', id: 'promo2'})
+				+promo-block({target: '#promo3', id: 'promo3'})
+			.section-promos__link-wrap
+				a.section-arrow__link(href="javascript:void(0)")
+					span Перейти к тарифам провайдера
+					+svg('icon-arrow')
+
+mixin promo-block(data)
+	.promo-block.collapse-block
+		.promo-block__inner
+			.promo-block__logo
+				img(src="s/images/useful/rostelecom.png", alt="rostelecom")
+			.promo-block__content
+				.promo-block__header
+					.promo-block__header__logo
+						img(src="s/images/useful/rostelecom.png", alt="rostelecom")
+					.promo-block__info
+						h4.promo-block__title Название акции + бонусыукукеукеукеукеукеуке
+						span.promo-block__date до 20 января 2019
+					a.btn.btn_bordered.btn_smh(href="javascritp:void(0)") Тарифы
+				.promo-block__banner
+				.promo-block__footer
+					button.collapse-trigger(type="button", data-toggle="collapse", data-target='' + data.target ? data.target : null, aria-expanded="false", aria-controls='' + data.id ? data.id : null)
+						.collapse-trigger__icon
+							+svg('icon-chevron')
+		.promo-block__collapse.collapse(id='' + data.id ? data.id : null)
+			.promo-block__collapse__inner
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsam, saepe quisquam pariatur repellat iste ex distinctio eum dolores ipsum fuga id? Non amet asperiores hic est laborum quos fugit ducimus harum velit. Enim fugiat rerum atque dolores fugit voluptates expedita nemo aut eius! Porro inventore dicta aut quod qui molestiae, labore deserunt amet accusamus excepturi aperiam sint consectetur vel dolorem praesentium nam consequuntur aliquid officia pariatur laudantium reiciendis voluptatem ducimus.
+				ul.promo-block__list.h-reset-list
+					li Для занятых домохозяйств с 5-9 устройствами
+					li Средняя скорость загрузки 6 Мбит/с
+				p Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas ipsam, saepe quisquam pariatur repellat iste ex distinctio eum dolores ipsum fuga id? Non amet asperiores hic est laborum quos fugit ducimus harum velit. Enim fugiat rerum atque dolores fugit voluptates expedita nemo aut eius! Porro inventore dicta aut quod qui molestiae, labore deserunt amet accusamus excepturi aperiam sint consectetur vel dolorem praesentium nam consequuntur aliquid officia pariatur laudantium reiciendis voluptatem ducimus.

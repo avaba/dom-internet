@@ -1,0 +1,114 @@
+.providers-selection {
+    padding: 9.3rem 0 9.3rem 0;
+    @media (max-width: $sw-sm-max) {
+        padding: 9.1rem 0 9.3rem 0;
+    }
+    @media (max-width: $sw-xs-max) {
+        padding: 9.6rem 0 2.5rem 0;
+    }
+    .section-title {
+        margin-bottom: 1rem;
+        @media (max-width: $sw-sm-max) {
+            margin-bottom: 1.1rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            line-height: 1.4;
+            margin-bottom: 2rem;
+        }
+        &__wrap {
+            width: 100%;
+            max-width: 88.2rem;
+            margin: 0 auto 8rem auto;
+            @media (max-width: $sw-sm-max) {
+                margin: 0 auto 6.7rem auto;
+            }
+            @media (max-width: $sw-xs-max) {
+                margin: 0 auto 4.6rem auto;
+            }
+        }
+    }
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        @media (max-width: $sw-xs-max) {
+            flex-wrap: wrap;
+        }
+    }
+    &__grid {
+        width: calc(100% / 3);
+        padding: 0 3.7rem;
+        @media (max-width: $sw-sm-max) {
+            padding: 0 1.4rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            padding: 0;
+            width: 100%;
+            margin-bottom: 3.7rem;
+        }
+        &:first-child {
+            .icon {
+                color: $red;
+            }
+        }
+        &:nth-child(2) {
+            .icon {
+                color: $orange;
+            }
+        }
+        &:last-child {
+            .icon {
+                color: $yellow
+            }
+        }
+    }
+    &__item {
+        text-align: center;
+    }
+    &__icon {
+        margin-bottom: 3.9rem;
+        min-height: 7rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (max-width: $sw-sm-max) {
+            margin-bottom: 2.7rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 4.1rem;
+        }
+        .icon {
+            &-address {
+                font-size: 7rem;
+            }
+            &-time {
+                font-size: 7rem;
+            }
+            &-person {
+                font-size: 7rem;
+            }
+            &-piggy-bank {
+                font-size: 7rem;
+            }
+            &-help {
+                font-size: 7rem;
+            }
+            &-list {
+                font-size: 5.4rem;
+            }
+        }
+    }
+    &__title {
+        margin-bottom: 1.6rem;
+        @media (max-width: $sw-sm-max) {
+            margin-bottom: 2.1rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 1.7rem;
+        }
+    }
+    &__text {
+        font-size: 1.4rem;
+        line-height: 1.4;
+        color: $grey;
+    }
+}

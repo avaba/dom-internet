@@ -1,0 +1,189 @@
+mixin section-tariffs(data)
+	.section-tariffs
+		.container
+			if data.title
+				.section-title__wrap
+					h2.section-title Провайдеры по адресу Невский, 120
+			.section-tariffs__wrapper
+				+section-filters({providers: data.providers, mobile: data.mobile})
+				.section-tariffs__inner
+					.section-tariffs__top
+						h3.section-tariffs__title!= data.inner_title
+						.section-tariffs__sort
+							a.section-tariffs__sort__btn.sort-btn.active(href="javascript:void(0)") Популярные
+							a.section-tariffs__sort__btn.sort-btn(href="javascript:void(0)") Дешевые
+							a.section-tariffs__sort__btn.sort-btn(href="javascript:void(0)") Лучшие
+					.section-tariffs__content
+						each tariff in data.tariffs
+							.tariff-block.collapse-block
+								.tariff-block__content
+									.tariff-block__left
+										.tariff-block__promo
+											span акция #[br] до 12 августа
+										.tariff-block__left__content
+											.tariff-block__left__side
+												.tariff-block__logo
+													img(src="s/images/useful/rostelecom.png", alt="rostelecom")
+												.tariff-block__price
+													span.price-val 590 ₽
+													span.price-unit за месяц
+											.tariff-block__left__side
+												.tariff-block__services
+													+svg('icon-wifi-sm')
+													+svg('icon-tv')
+													+svg('icon-stats')
+												.tariff-block__btn-wrap
+													button.btn.btn_bordered.btn_smh(type="button") выбрать
+									.tariff-block__right
+										.tariff-block__info
+											h4.tariff-block__title Тариф для всех + бонусыукукеукеукеукеукеуке бонусыукукеукеукеукеукеуке
+											ul.tariff-block__list.h-reset-list
+												li Для занятых домохозяйств с 5-9 устройствами
+												li Средняя скорость загрузки 6 Мбит/с
+											.tariff-block__grid
+												.tariff-block__grid__box
+													span.tariff-block__grid__title Скорость
+													span.tariff-block__grid__value 100
+													span.tariff-block__grid__units Мбит/с
+												.tariff-block__grid__box
+													span.tariff-block__grid__title Каналов
+													span.tariff-block__grid__value 114
+												.tariff-block__grid__box
+													span.tariff-block__grid__title Подключение
+													span.tariff-block__grid__value 1000
+													span.tariff-block__grid__units ₽
+												.tariff-block__grid__box
+													span.tariff-block__grid__title Договор
+													span.tariff-block__grid__value 12
+													span.tariff-block__grid__units месяцев
+										.tariff-block__events
+											.tariff-block__price
+												span.price-val 590 ₽
+												span.price-unit за месяц
+											button.btn.btn_bordered.btn_smh(type="button") выбрать
+											button.collapse-trigger(type="button", data-toggle="collapse", data-target='' + tariff.target ? tariff.target : null, aria-expanded="false", aria-controls='' + tariff.id ? tariff.id : null)
+												.collapse-trigger__icon
+													+svg('icon-chevron')
+										button(type="button").tariff-block__comparison
+											span + В сравнение
+								.tariff-block__collapse.collapse(id='' + tariff.id ? tariff.id : null)
+									.tariff-block__collapse__content
+										.tariff-block__collapse__side-wrap
+											.tariff-block__collapse__side
+												p.tariff-block__collapse__title Интернет
+												ul.tariff-block__collapse__list.h-reset-list
+													li
+														span.list-descr Скорость скачивания
+														span.list-value 108Mб
+													li
+														span.list-descr Скорость загрузки
+														span.list-value 6 Мб
+													li
+														span.list-descr Ежемесячное использование
+														span.list-value Неограниченно
+													li
+														span.list-descr Политика добросовестного использования
+														span.list-value Нет
+											.tariff-block__collapse__side
+												p.tariff-block__collapse__title Стоимость
+												ul.tariff-block__collapse__list.h-reset-list
+													li
+														span.list-descr Ежемесячная стоимость
+														span.list-value 54₽
+													li
+														span.list-descr Стоимость установки
+														span.list-value 80₽
+													li
+														span.list-descr 80₽ Стоимость первого года
+														span.list-value 728₽
+													li
+														span.list-descr Средняя стоимость в месяц
+														span.list-value -
+													li
+														span.list-descr Минимальная продолжительность контракта
+														span.list-value 1 месяц
+										.tariff-block__collapse__footer
+											p Вы можете подключить тариф по телефону #[a(href="tel:03300412479") 0330 041 2479]
+											button.btn.btn_bordered.btn.btn_smh(type="button") подключить
+					button.section-tariffs__show-more(type="button") Еще
+		.filters-mobile__wrap
+			button.filters-mobile__close(type="button")
+				+svg('icon-close')
+			form(action="javascript:void(0)")
+				.filters__title-wrap
+					h3.filters__title Фильтр
+					button.filters__reset(type="reset") Сбросить
+				if data.providers
+					.filters__providers
+						span.filters__title_sm Провайдеры
+						.filters__providers__radio-group
+							input(type="checkbox", name="filter_tele22", id="filter_tele22")
+							label(for="filter_tele22").filters__providers__radio-item
+								img(src="s/images/useful/filters/tele2.png", alt="tele2")
+							input(type="checkbox", name="filter_rostelecom2", id="filter_rostelecom2")
+							label(for="filter_rostelecom2").filters__providers__radio-item
+								img(src="s/images/useful/filters/rostelecom.png", alt="rostelecom")
+							input(type="checkbox", name="filter_mtc2", id="filter_mtc2")
+							label(for="filter_mtc2").filters__providers__radio-item
+								img(src="s/images/useful/filters/mtc.png", alt="mtc")
+							input(type="checkbox", name="filter_beeline2", id="filter_beeline2")
+							label(for="filter_beeline2").filters__providers__radio-item
+								img(src="s/images/useful/filters/beeline.png", alt="beeline")
+							input(type="checkbox", name="filter_yota2", id="filter_yota2")
+							label(for="filter_yota2").filters__providers__radio-item
+								img(src="s/images/useful/filters/yota.png", alt="yota")
+							input(type="checkbox", name="filter_megaphone2", id="filter_megaphone2")
+							label(for="filter_megaphone2").filters__providers__radio-item
+								img(src="s/images/useful/filters/megaphone.png", alt="megaphone")
+				.filters__services
+					span.filters__title_sm Услуга
+					.filters__services__radio-group
+						input(type="radio", name="filters_service2", id="filter_internet2")
+						label(for="filter_internet2").filters__services__radio-item
+							span Интернет
+						input(type="radio", name="filters_service2", id="filter_tv2", checked="checked")
+						label(for="filter_tv2").filters__services__radio-item
+							span ТВ
+						input(type="radio", name="filters_service2", id="filter_mobile_connerction2")
+						label(for="filter_mobile_connerction2").filters__services__radio-item
+							span Мобильная связь
+						input(type="radio", name="filters_service2", id="filter_cctv2")
+						label(for="filter_cctv2").filters__services__radio-item
+							span Видеонаблюдения
+						.filters__checkbox
+							input.filters__checkbox__input(type="checkbox", name="filter_promo2", id="checkbox_promo2")
+							label(for="checkbox_promo2").filters__checkbox__label
+								.filters__checkbox__label__inner
+									img(src="s/images/useful/svg/checkmark.svg", alt="checkmark")
+								span.filters__checkbox__name Акции
+				.filters__range(data-from="500", data-to="2000", data-type="single", data-postfix="₽")
+					span.filters__title_sm Стоимость, месяц
+					.filters__range-slider-wrap
+						input.filter-range-slider(type="text", id="cost_per_month2", name="cost_per_month2")
+				.filters__range(data-from="1", data-to="200", data-type="double", data-postfix="Мб")
+					span.filters__title_sm Скорость передачи
+					.filters__range-slider-wrap
+						input.filter-range-slider(type="text", id="internet_speed2", name="internet_speed2")
+				.filters__block-wrap
+					.filters__box
+						span.filters__title_sm Срок договора
+						.filters__box__radio-group
+							input(type="radio", name="filters_contract2", id="six_monthes2")
+							label(for="six_monthes2").filters__box__radio-item
+								span.filters__box__value 6
+								span.filters__box__descr мес
+							input(type="radio", name="filters_contract2", id="one_year2")
+							label(for="one_year2").filters__box__radio-item
+								span.filters__box__value 1
+								span.filters__box__descr год
+							input(type="radio", name="filters_contract2", id="contract_empty2", checked="checked")
+							label(for="contract_empty2").filters__box__radio-item
+								span.filters__box__name Нет
+					.filters__checkbox
+						span.filters__title_sm Оборудование
+						input.filters__checkbox__input(type="checkbox", name="filter_promo2", id="checkbox_equipment2")
+						label(for="checkbox_equipment2").filters__checkbox__label
+							.filters__checkbox__label__inner
+								img(src="s/images/useful/svg/checkmark.svg", alt="checkmark")
+							span.filters__checkbox__name В аренду
+				button.btn.btn_blue.btn_shadowed.btn_lgh.filter-agree(type="button") продолжить

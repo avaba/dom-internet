@@ -1,0 +1,20 @@
+extends _includes/_extends/main
+
+include _includes/components/section-modal/section-modal
+
+block head
+	+head({'title':'Модалки'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	div(style='margin: 100px auto 0 auto; display: flex; justify-content: space-between; width: 275px')
+		button.btn.btn_blue.btn_mdh(type="button", data-toggle="modal" data-target="#requestModal", style='width: 125px') Modal request
+		button.btn.btn_blue.btn_mdh(type="button", data-toggle="modal" data-target="#successModal", style='width: 125px') Modal sucess
+
+block beforescripts
+	+section-modal({modal_request: true})
+	+section-modal({modal_success: true})
+
+block footer

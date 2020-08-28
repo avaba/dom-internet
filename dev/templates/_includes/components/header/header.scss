@@ -1,0 +1,253 @@
+.header {
+    background-color: $white;
+    border-bottom: 1px solid $light-grey;
+    position: relative;
+    .header__list {
+        @media (max-width: $sw-sm-max) {
+            display: none;
+        }
+    }
+    .city__choose {
+        margin-right: 4.1rem;
+        @media (max-width: $sw-xs-max) {
+            display: none;
+        }
+    }
+    &__inner {
+        height: 80px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        background-color: #fff;
+    }
+    &__menu-trigger {
+        margin-right: 1.8rem;
+        cursor: pointer;
+        height: 2.2rem;
+        display: none;
+        @media (max-width: $sw-sm-max) {
+            display: flex;
+            align-items: center;
+        }
+        .icon-burger {
+            font-size: 2rem;
+            color: #000000;
+        }
+    }
+    &__search-trigger {
+        margin-left: auto;
+        cursor: pointer;
+        color: $grey;
+        transition: color .3s ease;
+        @media (max-width: $sw-xs-max) {
+            display: none;
+        }
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark;
+            }
+        }
+        .icon-search {
+            font-size: 2rem;
+        }
+    }
+    &__logo {
+        margin-right: 4.1rem;
+        font-size: 2.4rem;
+        line-height: 1.2;
+        color: $dark;
+        font-weight: 400;
+        @media (max-width: $sw-xs-max) {
+            margin-right: 2.3rem;
+        }
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark;
+            }
+        }
+        span {
+            font-weight: 700;
+        }
+    }
+    &__call {
+        color: $grey;
+        display: none;
+        margin-left: auto;
+        @media (max-width: $sw-xs-max) {
+            display: block;
+        }
+        .icon-phone-mobile {
+            font-size: 2rem;
+        }
+    }
+    &__close-trigger {
+        display: none;
+        margin-left: auto;
+        @media (max-width: $sw-xs-max) {
+            display: block;
+        }
+        .icon-close {
+            font-size: 2rem;
+            color: $grey;
+        }
+    }
+    &__list {
+        display: flex;
+        align-items: center;
+        @media (max-width: $sw-sm-max) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &-wrap {
+            @media (max-width: $sw-sm-max) {
+                margin-top: 20px;
+                padding-left: 88px;
+            }
+            @media (max-width: $sw-xs-max) {
+                margin-top: 21px;
+                padding-left: 30px;
+            }
+        }
+        li {
+            margin-right: 3.8rem;
+            @media (max-width: $sw-sm-max) {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+            &.tariff-choose {
+                a {
+                    @media (max-width: $sw-xs-max) {
+                        color: $blue;
+                    }
+                }
+            }
+            &.active {
+                a {
+                    color: $blue;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 97%;
+                        height: 2px;
+                        background-color: #2D9CDB;
+                        position: absolute;
+                        bottom: -1rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            a {
+                font-size: 1.6rem;
+                line-height: 1.2;
+                color: $dark;
+                position: relative;
+                &:hover {
+                    @media (min-width: $sw-sm-min) {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+    // mobile manu
+    &__menu {
+        background-color: #fff;
+        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
+        overflow-y: auto;
+        transition: transform .5s ease;
+        position: fixed;
+        width: 100%;
+        max-width: 540px;
+        height: 100vh;
+        left: -540px;
+        top: 0;
+        z-index: 20;
+        &__top {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            border-bottom: 1px solid $light-grey;
+            @media (max-width: $sw-xs-max) {
+                padding: 0 30px;
+            }
+        }
+        .city__choose {
+            @media (max-width: $sw-xs-max) {
+                display: none;
+            }
+            &__dropdown {
+                left: 50%;
+                margin-left: -130px;
+            }
+        }
+    }
+}
+
+.search-field {
+    width: 100%;
+    position: absolute;
+    top: calc(100% + 1px);
+    z-index: 1;
+    left: 0;
+    background-color: $white;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .6s ease, visibility .6s ease, transform .5s ease;
+    &.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+    &__icon {
+        flex-shrink: 0;
+        margin-right: 20px;
+        .icon-search {
+            font-size: 20px;
+            color: $grey;
+        }
+    }
+    &__input {
+        height: 80px;
+        width: 100%;
+        color: $grey;
+        font-size: 16px;
+        border: none;
+        &:focus {
+            outline: none;
+            border: none;
+            @include placeholder {
+                opacity: 0;
+            }
+        }
+        @include placeholder {
+            color: $grey;
+            font-size: 16px;
+            opacity: 1;
+            transition: opacity .3s ease;
+        }
+    }
+    &__close {
+        margin-left: 20px;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: color .3s ease;
+        color: $grey;
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark;
+            }
+        }
+        .icon-close {
+            font-size: 30px;
+        }
+    }
+}

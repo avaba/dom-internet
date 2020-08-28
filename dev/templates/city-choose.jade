@@ -1,0 +1,12 @@
+extends _includes/_extends/main
+
+include _includes/components/city-choose-section/city-choose-section
+
+block head
+	+head({'title':'Выбор города'})
+
+block header
+	+header({call: false, close: true})
+
+block content
+	+city-choose-section()

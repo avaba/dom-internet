@@ -1,0 +1,84 @@
+mixin section-filters(data)
+	.filters__wrapper
+		form(action="javascirtp:void(0)")
+			.filters__title-wrap
+				h3.filters__title Фильтр
+				button.filters__reset(type="reset") Сбросить
+			.filters__checkbox.filter__block
+				input.filters__checkbox__input(type="checkbox", name="filter_promo", id="checkbox_promo")
+				label(for="checkbox_promo").filters__checkbox__label
+					.filters__checkbox__label__inner
+						img(src="s/images/useful/svg/checkmark.svg", alt="checkmark")
+					span.filters__checkbox__name Акции
+			.filters__services.filter__block
+				span.filters__title_sm Услуга
+				.filters__services__radio-group
+					input(type="radio", name="filters_service", id="filter_internet")
+					label(for="filter_internet").filters__services__radio-item
+						span Интернет
+					input(type="radio", name="filters_service", id="filter_tv", checked="checked")
+					label(for="filter_tv").filters__services__radio-item
+						span ТВ
+					input(type="radio", name="filters_service", id="filter_mobile_connerction")
+					label(for="filter_mobile_connerction").filters__services__radio-item
+						span Мобильная связь
+					input(type="radio", name="filters_service", id="filter_cctv")
+					label(for="filter_cctv").filters__services__radio-item
+						span Видеонаблюдения
+			if data.providers
+				.filters__providers.filter__block
+					span.filters__title_sm Провайдеры
+					.filters__providers__radio-group
+						input(type="checkbox", name="filter_tele2", id="filter_tele2")
+						label(for="filter_tele2").filters__providers__radio-item
+							img(src="s/images/useful/filters/tele2.png", alt="tele2")
+						input(type="checkbox", name="filter_rostelecom", id="filter_rostelecom")
+						label(for="filter_rostelecom").filters__providers__radio-item
+							img(src="s/images/useful/filters/rostelecom.png", alt="rostelecom")
+						input(type="checkbox", name="filter_mtc", id="filter_mtc")
+						label(for="filter_mtc").filters__providers__radio-item
+							img(src="s/images/useful/filters/mtc.png", alt="mtc")
+						input(type="checkbox", name="filter_beeline", id="filter_beeline")
+						label(for="filter_beeline").filters__providers__radio-item
+							img(src="s/images/useful/filters/beeline.png", alt="beeline")
+						input(type="checkbox", name="filter_yota", id="filter_yota")
+						label(for="filter_yota").filters__providers__radio-item
+							img(src="s/images/useful/filters/yota.png", alt="yota")
+						input(type="checkbox", name="filter_megaphone", id="filter_megaphone")
+						label(for="filter_megaphone").filters__providers__radio-item
+							img(src="s/images/useful/filters/megaphone.png", alt="megaphone")
+					.filters__providers__show-more-wrap
+						button.filters__providers__show-more(type="button") Все провайдеры
+			.filters__mobile-trigger-wrap
+				button.filters__mobile-trigger(type="button") 
+					span Все фильтры
+					+svg('icon-chevron')
+			.filters__range.filter__block(data-from="500", data-to="2000", data-type="single", data-postfix="₽", class='' + data.mobile ? data.mobile : null)
+				span.filters__title_sm Стоимость, месяц
+				.filters__range-slider-wrap
+					input.filter-range-slider(type="text", id="cost_per_month", name="cost_per_month", value="")
+			.filters__range.filter__block.mobile-hidden(data-from="1", data-to="200", data-type="double", data-postfix="Мб")
+				span.filters__title_sm Скорость передачи
+				.filters__range-slider-wrap
+					input.filter-range-slider(type="text", id="internet_speed", name="internet_speed", value="")
+			.filters__checkbox.filter__block.mobile-hidden
+				span.filters__title_sm Оборудование
+				input.filters__checkbox__input(type="checkbox", name="filter_promo", id="checkbox_equipment")
+				label(for="checkbox_equipment").filters__checkbox__label
+					.filters__checkbox__label__inner
+						img(src="s/images/useful/svg/checkmark.svg", alt="checkmark")
+					span.filters__checkbox__name В аренду
+			.filters__box.filter__block.mobile-hidden
+				span.filters__title_sm Срок договора
+				.filters__box__radio-group
+					input(type="radio", name="filters_contract", id="six_monthes")
+					label(for="six_monthes").filters__box__radio-item
+						span.filters__box__value 6
+						span.filters__box__descr мес
+					input(type="radio", name="filters_contract", id="one_year")
+					label(for="one_year").filters__box__radio-item
+						span.filters__box__value 1
+						span.filters__box__descr год
+					input(type="radio", name="filters_contract", id="contract_empty", checked="checked")
+					label(for="contract_empty").filters__box__radio-item
+						span.filters__box__name Нет

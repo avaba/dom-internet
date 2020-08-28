@@ -1,0 +1,23 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/contacts-section/contacts-section
+
+block head
+	+head({'title':'Контакты'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+hero-component({
+		hero_class: 'hero-sm',
+		img: 'img3', 
+		title: 'Контакты',
+		secondary: 'Экономим ваше время при выборе провайдера. Просто введите адрес и получите список лучших предложений, доступных для вашего дома'
+	})
+	+contacts-section()
+
+block scripts
+	script(src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU")

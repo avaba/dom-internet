@@ -1,0 +1,12 @@
+extends _includes/_extends/main
+
+include _includes/components/cite-map-section/cite-map-section
+
+block head
+	+head({'title':'Карта сайта'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+cite-map-section()

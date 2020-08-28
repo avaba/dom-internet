@@ -1,0 +1,28 @@
+mixin section-collapse(data)
+	.section-collapse
+		.container
+			.section-title__wrap
+				h2.section-title Мы делаем поиск подходящей широкополосной связи, телевидения или мобильной связи простым делом
+			.section-collapse__inner
+				.collapse-block.active
+					button(type="button" data-toggle="collapse" data-target="#collapse_first" aria-expanded="false" aria-controls="collapse_first").section-collapse__trigger
+						span 1. Мы сравниваем предложения широкополосного доступа 
+						+svg('icon-chevron-sm')
+					.section-collapse__content.collapse.show(id="collapse_first")
+						.section-collapse__content__inner
+							p Каждый день команда Cable работает на рынке Великобритании, чтобы найти самые замечательные предложения широкополосного доступа. Мы гарантируем, что мы покажем вам не только лучшие предложения, доступные вам, где вы живете, но и инструменты, необходимые для сужения выбора. С Кабелем, найти правильную сделку никогда не было проще.
+							p Типы широкополосного доступа вы найдете на кабеле #[br] Стандартная широкополосная связь, также известная как широкополосная связь без волокон или ADSL, имеет типичные средние скорости 10-11 Мбит / с. Он предназначен для небольших домашних хозяйств с ограниченным использованием Интернета. Сверхбыстрая оптоволоконная широкополосная связь - это скорость более 24 Мбит / с и менее 300 Мбит / с, что подходит для средних и крупных семей с умеренным или высоким уровнем использования Интернета. Сверхбыстрая оптоволоконная широкополосная связь встречается реже и относится ко всем скоростям свыше 300 Мбит / с, что хорошо для очень больших семей, студентов и студентов, а также для опытных пользователей.
+				.collapse-block
+					button(type="button" data-toggle="collapse" data-target="#collapse_second" aria-expanded="false" aria-controls="collapse_second").section-collapse__trigger
+						span 2. Мы сравниваем предложения широкополосного доступа
+						+svg('icon-chevron-sm')
+					.section-collapse__content.collapse(id="collapse_second")
+						.section-collapse__content__inner
+							p Каждый день команда Cable работает на рынке Великобритании, чтобы найти самые замечательные предложения широкополосного доступа. Мы гарантируем, что мы покажем вам не только лучшие предложения, доступные вам, где вы живете, но и инструменты, необходимые для сужения выбора. С Кабелем, найти правильную сделку никогда не было проще.
+				.collapse-block
+					button(type="button" data-toggle="collapse" data-target="#collapse_third" aria-expanded="false" aria-controls="collapse_third").section-collapse__trigger
+						span 3. Мы сравниваем предложения широкополосного доступа
+						+svg('icon-chevron-sm')
+					.section-collapse__content.collapse(id="collapse_third")
+						.section-collapse__content__inner
+							p Каждый день команда Cable работает на рынке Великобритании, чтобы найти самые замечательные предложения широкополосного доступа. Мы гарантируем, что мы покажем вам не только лучшие предложения, доступные вам, где вы живете, но и инструменты, необходимые для сужения выбора. С Кабелем, найти правильную сделку никогда не было проще.

@@ -1,0 +1,159 @@
+.search-result {
+    &-section {
+        padding: 5rem 0 18.7rem 0;
+        @media (max-width: $sw-sm-max) {
+            padding: 5rem 0;
+        }
+        @media (max-width: $sw-xs-max) {
+            padding: 5rem 0 1.5rem 0;
+        }
+    }
+    &__top {
+        display: flex;
+        position: relative;
+        align-items: flex-start;
+        margin-bottom: 4.5rem;
+    }
+    &__form {
+        width: 100%;
+        display: flex;
+        @media (max-width: $sw-xs-max) {
+            flex-wrap: wrap;
+        }
+        .form-control__wrap {
+            width: 100%;
+            margin-right: 1rem;
+            @media (max-width: $sw-xs-max) {
+                margin-bottom: 1rem;
+                margin-right: 0;
+                width: 100%;
+            }
+        }
+        .icon-search {
+            font-size: 2rem;
+            color: $grey;
+            position: absolute;
+            top: 50%;
+            left: 2rem;
+            transform: translateY(-50%);
+        }
+        .form-control {
+            padding-left: 5rem;
+        }
+        .form-control__placeholder {
+            left: 5.2rem;
+        }
+        .btn {
+            width: 16rem;
+            flex-shrink: 0;
+            @media (max-width: $sw-sm-max) {
+                width: 15.4rem;
+            }
+            @media (max-width: $sw-xs-max) {
+                width: 100%;
+            }
+        }
+    }
+    &__close {
+        cursor: pointer;
+        transition: color .3s ease;
+        color: $grey;
+        width: 3rem;
+        margin-left: 5rem;
+        flex-shrink: 0;
+        @media (max-width: $sw-sm-max) {
+            margin-left: 3.7rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            display: none;
+        }
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark;
+            }
+        }
+        .icon-close {
+            font-size: 3rem;
+        }
+    }
+    &__title {
+        margin-right: 4rem;
+        @media (max-width: $sw-xs-max) {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 3.2rem;
+            font-size: 3rem;
+        }
+        &-wrap {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2.7rem;
+            @media (max-width: $sw-xs-max) {
+                flex-wrap: wrap;
+                margin-bottom: 3.3rem;
+            }
+        }
+    }
+    &__sort {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        &__btn {
+            color: $grey;
+            font-size: 1.2rem;
+            height: 3.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $silver;
+            box-shadow: none;
+            padding: 0 1.9rem;
+            transition: box-shadow .3s ease, color .3s ease, background-color .3s ease;
+            @media (max-width: $sw-xs-max) {
+                padding: 0 1rem;
+            }
+            &.active {
+                background-color: $white;
+                box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+                color: $dark;
+                z-index: 1;
+            }
+            &:hover {
+                @media (min-width: $sw-sm-min) {
+                    color: $dark;
+                }
+            }
+            &:first-child {
+                border-radius: 2px 0 0 2px;
+            }
+            &:last-child {
+                border-radius: 0 2px 2px 0;
+            }
+        }
+    }
+    &__block {
+        margin-bottom: 3.7rem;
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 3rem;
+        }
+        p {
+            @media (max-width: $sw-xs-max) {
+                margin-bottom: 1.7rem;
+            }
+        }
+        &__title {
+            margin-bottom: 2rem;
+            @media (max-width: $sw-xs-max) {
+                margin-bottom: 2.2rem;
+            }
+        }
+        &__link {
+            font-size: 1.6rem;
+            line-height: 1.2;
+            @media (max-width: $sw-xs-max) {
+                line-height: 1.5;
+            }
+        }
+    }
+}

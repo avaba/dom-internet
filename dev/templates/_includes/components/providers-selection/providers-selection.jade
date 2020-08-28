@@ -1,0 +1,14 @@
+mixin providers-selection(data)
+	.providers-selection
+		.container
+			.section-title__wrap
+				h2.section-title Сервис подбора провайдеров домашнего интернета dominternet.ru
+				p.section-subtitle Здесь вы найдете все предложения операторов для подключения интернета, телевидения, видеонаблюдения и мобильной связи
+			.providers-selection__inner
+				each item in data.items
+					.providers-selection__grid
+						.providers-selection__item
+							.providers-selection__icon
+								+svg(item.icon)
+							h3.providers-selection__title!= item.title
+							p.providers-selection__text!= item.text

@@ -1,0 +1,92 @@
+.section-collapse {
+    background-color: #FBFBFB;
+    padding: 8.9rem 0 9.5rem 0;
+    @media (max-width: $sw-sm-max) {
+        padding: 8.9rem 0 7.5rem 0;
+    }
+    .section-title__wrap {
+        width: 100%;
+        max-width: 88.2rem;
+        margin: 0 auto 5.7rem auto;
+        @media (max-width: $sw-sm-max) {
+            max-width: 59rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            margin: 0 auto 3.9rem auto;
+        }
+        .section-title {
+            line-height: 1.2;
+            @media (max-width: $sw-xs-max) {
+                line-height: 1.4;
+            }
+        }
+    }
+    &__inner {
+        width: 100%;
+        max-width: 88.2rem;
+        margin: 0 auto;
+        @media (max-width: $sw-sm-max) {
+            max-width: 52.6rem;
+        }
+    }
+    .collapse-block {
+        margin-bottom: 2.2rem;
+        @media (max-width: $sw-sm-max) {
+            margin-bottom: 2.5rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 2.2rem;
+        }
+        &.active {
+            .icon-chevron-sm {
+                transform: rotate(0);
+            }
+        }
+    }
+    &__trigger {
+        display: block;
+        cursor: pointer;
+        text-align: left;
+        color: $blue;
+        transition: color .3s ease;
+        @media (max-width: $sw-xs-max) {
+            display: block;
+        }
+        &:hover {
+            @media (min-width: $sw-sm-min) {
+                color: $dark !important;
+            }
+        }
+        span {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .icon-chevron-sm {
+            font-size: 3px;
+            margin-left: 6px;
+            margin-bottom: 4px;
+            transition: transform .15s ease;
+            transform: rotate(-90deg);
+            @media (max-width: $sw-xs-max) {
+                margin-left: 4px;
+            }
+        }
+    }
+    &__content {
+        p {
+            font-size: 1.6rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+            & + p {
+                margin-top: 2.4rem;
+            }
+        }
+        &__inner {
+            padding: 2rem 0 0 0;
+            @media (max-width: $sw-xs-max) {
+                padding: 1.8rem 0 0 0;
+            }
+        }
+    }
+}

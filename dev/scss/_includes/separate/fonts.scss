@@ -1,0 +1,15 @@
+@mixin font-face ($fontname, $fontfile, $fontweight: normal, $fontstyle: normal) {
+	@font-face {
+		font-family: $fontname;
+		src: url('../fonts/' + $fontfile + '/' + $fontfile + '.eot');
+		src: url('../fonts/' + $fontfile + '/' + $fontfile + '.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/' + $fontfile + '/' + $fontfile + '.woff') format('woff'),
+			 url('../fonts/' + $fontfile + '/' + $fontfile + '.ttf') format('truetype'),
+			 url('../fonts/' + $fontfile + '/' + $fontfile + '.svg##{fontname}') format('svg');
+		font-weight: $fontweight;
+		font-style: $fontstyle;
+	}
+};
+
+@include font-face(lato, lato-regular, 400);
+@include font-face(lato, lato-bold, 700);

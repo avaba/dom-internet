@@ -1,0 +1,70 @@
+.footer {
+    background-color: $white;
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        padding: 50px 0;
+        @media (max-width: $sw-xs-max) {
+            flex-wrap: wrap;
+            padding: 47px 10px 47px 20px;
+        }
+    }
+    &__side {
+        width: 100%;
+        &:first-child {
+            width: 23.7rem;
+            margin-right: 4.2rem;
+            flex-shrink: 0;
+            @media (max-width: $sw-xs-max) {
+                margin-right: 0;
+                margin-bottom: 1.9rem;
+                width: 100%;
+            }
+        }
+    }
+    .city__choose {
+        margin-bottom: 2.9rem;
+    }
+    &__list {
+        column-count: 3;
+        column-gap: 3.7rem;
+        @media (max-width: $sw-sm-max) {
+            column-count: 2;
+            column-gap: 6.6rem;
+        }
+        @media (max-width: $sw-xs-max) {
+            column-count: 1;
+            column-gap: 0;
+        }
+        li {
+            margin-bottom: 2.8rem;
+            &.active {
+                a {
+                    color: $blue;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 97%;
+                        height: 2px;
+                        background-color: #2D9CDB;
+                        position: absolute;
+                        bottom: -1rem;
+                        left: 50%;
+                        transform: translateX(-50%);
+                    }
+                }
+            }
+            a {
+                font-size: 1.6rem;
+                line-height: 1.2;
+                color: $dark;
+                position: relative;
+                &:hover {
+                    @media (min-width: $sw-sm-min) {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

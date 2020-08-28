@@ -1,0 +1,35 @@
+mixin request-form(data)
+	.request-section
+		.container
+			.request-inner
+				.section-title__wrap
+					h2.section-title Оставить заявку на подключение
+					p.section-subtitle Задайте дату завершения вашего текущего тарифа и мы напомним
+				form.request-form.js-form-check(action="javascript:void(0)")
+					.form-control__wrap
+						.input-wrap.required
+							input.form-control(type="text", required, name="user_city")
+							span.form-control__placeholder Город
+					.form-control__group
+						.form-control__wrap
+							.input-wrap.required
+								input.form-control(type="text", required, name="user_street")
+								span.form-control__placeholder Улица
+						.form-control__wrap
+							.input-wrap.required
+								input.form-control(type="text", required, name="user_apartment")
+								span.form-control__placeholder Дом
+						.form-control__wrap
+							.input-wrap.required
+								input.form-control(type="text", required, name="user_home")
+								span.form-control__placeholder Кв
+					.form-control__wrap
+						.input-wrap.required
+							input.form-control(type="number", required, name="user_phone")
+							span.form-control__placeholder Телефон
+					.form-control__wrap
+						.input-wrap.required
+							input.form-control(type="text", required, name="user_name")
+							span.form-control__placeholder Имя
+					button.btn.btn_shadowed.btn_md.btn_lgh.btn_blue(type="submit")
+						span отправить

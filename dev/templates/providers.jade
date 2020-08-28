@@ -1,0 +1,46 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/cta-section/cta-section
+include _includes/components/providers-selection/providers-selection
+include _includes/components/section-collapse/section-collapse
+include _includes/components/contact-phone/contact-phone
+
+block head
+	+head({'title':'Провадеры'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+hero-component({
+		img: 'img8', 
+		title: 'Подключайте выгодные тарифы на интернет и ТВ в Санкт&#8209;Петербурге',
+		secondary: 'Экономим ваше время при выборе провайдера. Просто введите адрес и получите список лучших предложений, доступных для вашего дома',
+		button_class: 'btn_blue',
+		submit_text: 'Найти',
+		placeholder: 'Введите ваш адрес'
+	})
+	+cta-section({tariffs: true})
+	+providers-selection({
+		items: [
+			{
+				icon: 'icon-piggy-bank',
+				title: 'Экономим деньги',
+				text: 'Предоставляем акционные и закрытые тарифные планы, которые провайдеры не афишируют'
+			},
+			{
+				icon: 'icon-help',
+				title: 'Помогаем с решением',
+				text: 'Наши менеджеры всегда помогут подобрать тариф, подходящий именно Вам!'
+			},
+			{
+				icon: 'icon-list',
+				title: 'Работаем честно',
+				text: 'На нашем сайте вы найдете актуальные тарифы с подробным описанием условий договора'
+			}
+		]
+	})
+	+section-collapse()
+	+contact-phone()

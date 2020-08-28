@@ -1,0 +1,15 @@
+mixin contacts-section(data)
+	.contacts-section
+		.container
+			.contacts__info
+				.contacts__info__block
+					p #[b 191240, Россия, Ростов-на-Дону, пр. Ленанина, 160, офис 303]
+					p #[a(href="mailto:ux.pro@ya.ru") ux.pro@ya.ru] #[a(href="tel:88002002000") 8 800 200 2000]
+				.contacts__info__block.block-schedule
+					p Главный офис, часы работы:
+					p Пн-пт: 09:00 - 19:00, сб-вс: 12:00 - 16:00
+				.contacts__info__block.block-schedule
+					p Отдел продаж, часы работы:
+					p Пн-пт: 09:00 - 19:00, сб-вс: 12:00 - 16:00
+			.contacts__map
+				#map.map-wrapper(data-location="[47.250075388415006,39.653635499999936]")

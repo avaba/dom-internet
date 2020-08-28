@@ -1,0 +1,104 @@
+.remind-form {
+    position: relative;
+    background-image: url('../../s/images/useful/img7.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    @media (max-width: $sw-xs-max) {
+        background-attachment: scroll;
+    }
+    &:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(#2D9CDB, 0.8);
+    }
+    .section-title {
+        margin-bottom: 1.5rem;
+        @media (max-width: $sw-xs-max) {
+            margin-bottom: 2.2rem;
+        }
+        &__wrap {
+            margin-bottom: 3.5rem;
+            @media (max-width: $sw-sm-max) {
+                width: 100%;
+                margin: 0 auto 3.5rem auto;
+                max-width: 55rem;
+            }
+        }
+    }
+    &__inner {
+        width: 100%;
+        max-width: 85rem;
+        margin: 0 auto;
+        padding: 8.5rem 0 10rem 0;
+        text-align: center;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 1;
+        @media (max-width: $sw-sm-max) {
+            padding: 9.1rem 0 10rem 0;
+        }
+        @media (max-width: $sw-xs-max) {
+            padding: 10rem 0 10rem 0;
+        }
+        .section-title {
+            color: $white;
+        }
+        .section-subtitle {
+            color: $white;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        @media (max-width: $sw-xs-max) {
+            width: 100%;
+            max-width: 33rem;
+            flex-wrap: wrap;
+        }
+        .form-control__wrap {
+            margin-right: 1rem;
+            @media (max-width: $sw-xs-max) {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+            &:first-child {
+                width: 29.2rem;
+                @media (max-width: $sw-sm-max) {
+                    width: 22.3rem;
+                }
+                @media (max-width: $sw-xs-max) {
+                    width: 100%;
+                }
+            }
+            &:nth-child(2) {
+                width: 21.7rem;
+                @media (max-width: $sw-sm-max) {
+                    width: 18.3rem;
+                }
+                @media (max-width: $sw-xs-max) {
+                    width: 100%;
+                }
+            }
+        }
+        .btn {
+            width: 16rem;
+            flex-shrink: 0;
+            @media (max-width: $sw-sm-max) {
+                width: 12.8rem;
+            }
+            @media (max-width: $sw-xs-max) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/providers-list/providers-list
+
+block head
+	+head({'title':'404'})
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+hero-component({
+		hero_class: 'hero-404',
+		img: 'img12', 
+		title: '404',
+		secondary: 'страница не найдена'
+	})
+	+providers-list({title: 'Провайдеры в Санкт&#8209;Петербурге'})

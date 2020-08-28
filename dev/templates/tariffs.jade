@@ -1,0 +1,87 @@
+extends _includes/_extends/main
+
+include _includes/components/hero-component/hero-component
+include _includes/components/c-forms/c-forms
+include _includes/components/providers-selection/providers-selection
+include _includes/components/contact-phone/contact-phone
+include _includes/components/remind-form/remind-form
+include _includes/components/section-tariffs/section-tariffs
+include _includes/components/section-filters/section-filters
+include _includes/components/comparison-block/comparison-block
+
+block head
+	+head({'title':'Тарифы'})
+
+
+block header
+	+header({call: true, close: false})
+
+block content
+	+hero-component({
+		hero_class: 'hero-sm bg-left-center',
+		img: 'img14', 
+		title: 'Тарифы от провайдеров в <br> Санкт&#8209;Петербурге',
+		button_class: 'btn_blue',
+		submit_text: 'Найти',
+		placeholder: 'Введите ваш адрес'
+	})
+	+section-tariffs({
+		providers: true,
+		mobile: 'mobile-hidden',
+		title: true,
+		inner_title: 'Найдено 156 тарифов от 12 партнеров',
+		tariffs: [
+			{
+				target: '#tariff_first',
+				id: 'tariff_first'
+			},
+			{
+				target: '#tariff_second',
+				id: 'tariff_second'
+			},
+			{
+				target: '#tariff_third',
+				id: 'tariff_third'
+			},
+			{
+				target: '#tariff_fourth',
+				id: 'tariff_fourth'
+			},
+			{
+				target: '#tariff_fifth',
+				id: 'tariff_fifth'
+			},
+			{
+				target: '#tariff_sixth',
+				id: 'tariff_sixth'
+			},
+			{
+				target: '#tariff_seventh',
+				id: 'tariff_seventh'
+			}
+		]
+	})
+	+remind-form()
+	+providers-selection({
+		items: [
+			{
+				icon: 'icon-piggy-bank',
+				title: 'Экономим деньги',
+				text: 'Предоставляем акционные и закрытые тарифные планы, которые провайдеры не афишируют'
+			},
+			{
+				icon: 'icon-help',
+				title: 'Помогаем с решением',
+				text: 'Наши менеджеры всегда помогут подобрать тариф, подходящий именно Вам!'
+			},
+			{
+				icon: 'icon-list',
+				title: 'Работаем честно',
+				text: 'На нашем сайте вы найдете актуальные тарифы с подробным описанием условий договора'
+			}
+		]
+	})
+	+contact-phone()
+
+block beforescripts
+	+comparison-block()

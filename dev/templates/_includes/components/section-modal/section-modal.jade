@@ -1,0 +1,71 @@
+mixin section-modal(data)
+	if data.modal_request
+		#requestModal.modal-request.modal.fade(tabindex='-1', role='dialog', aria-labelledby='requestModalLabel', aria-hidden='true')
+			.modal-dialog(role='document')
+				.modal-content
+					.modal-content__inner
+						button.modal-close(type="button", data-dismiss="modal")
+							+svg('icon-close')
+						.modal-content__top
+							.modal-content__logo
+								img(src="s/images/useful/rostelecom.png", alt="restelecom")
+							.modal-content__contact
+								.modal-content__contact__icon
+									+svg('icon-phone-mobile')
+								.modal-content__contact__content
+									span Номер подключения
+									a(href="tel:88002000000") 8 800 200 0000
+						.modal-content__info
+							h4.tariff-block__title Тариф для всех + бонусыукукеукеукеукеукеуке
+							ul.tariff-block__list.h-reset-list
+								li Для занятых домохозяйств с 5-9 устройствами
+								li Средняя скорость загрузки 6 Мбит/с
+							.tariff-block__grid
+								.tariff-block__grid__box
+									span.tariff-block__grid__title Скорость
+									span.tariff-block__grid__value 100
+									span.tariff-block__grid__units Мбит/с
+								.tariff-block__grid__box
+									span.tariff-block__grid__title Каналов
+									span.tariff-block__grid__value 114
+								.tariff-block__grid__box
+									span.tariff-block__grid__title Подключение
+									span.tariff-block__grid__value 1000
+									span.tariff-block__grid__units ₽
+								.tariff-block__grid__box
+									span.tariff-block__grid__title Договор
+									span.tariff-block__grid__value 12
+									span.tariff-block__grid__units месяцев
+						.modal-content__form-wrap
+							h3.modal-content__title Заявка на подключение
+							p.modal-content__subtitle Наш оператор обязательно свяжется с вами в ближайшее время
+							form.modal-content__form.js-form-check(action="javascript:void(0)")
+								.form-control__wrap
+									.input-wrap.required
+										input.form-control(type="text", required, name="request_user_phone")
+										span.form-control__placeholder Телефон
+								.form-control__wrap
+									.input-wrap.required
+										input.form-control(type="text", required, name="request_user_name")
+										span.form-control__placeholder Имя
+								.form-control__wrap
+									.input-wrap.required
+										select(name="convenient_call_time").selectpicker
+											option(value="1") Ближайшее время
+											option(value="2") Ближайшее время 1
+										span.form-control__placeholder Удобное время
+								p.modal-content__form__politic Отправляя заявку, вы соглашаетесь с #[a(href="javascript:void(0)") политикой обработки персональных данных]
+								button.btn.btn_blue.btn_shadowed.btn_md.btn_lgh(type="submit") Отправить
+
+
+
+	if data.modal_success
+		#successModal.modal-success.modal.fade(tabindex='-1', role='dialog', aria-labelledby='successModalLabel', aria-hidden='true')
+			.modal-dialog(role='document')
+				.modal-content
+					.modal-content__inner
+						.modal-content__icon
+							+svg('icon-check')
+						h3.modal-content__title Заявка отправлена
+						p.modal-content__subtitle Наш оператор обязательно свяжется с вами в ближайшее время
+						button.btn.btn_blue.btn_shadowed.btn_md.btn_lgh(type="button", data-dismiss="modal") Понятно

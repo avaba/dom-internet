@@ -1,0 +1,51 @@
+mixin search-result-section(data)
+	.search-result-section
+		.container
+			.search-result__top
+				form(action="javascript:void(0)").search-result__form
+					.form-control__wrap
+						.input-wrap
+							+svg('icon-search')
+							input.form-control.is-filled(type="text", name="city_search", required, value="Поиcковый запрос")
+							span.form-control__placeholder Поиск
+					button.btn.btn_blue.btn_shadowed.btn_lgh.btn_md(type="submit") Найти
+				button.search-result__close(type="button")
+					+svg('icon-close')
+			.search-result__title-wrap
+				h3.search-result__title Найдено 156
+				.search-result__sort
+					a.search-result__sort__btn.sort-btn.active(href="javascript:void(0)") Все
+					a.search-result__sort__btn.sort-btn(href="javascript:void(0)") Обзоры
+					a.search-result__sort__btn.sort-btn(href="javascript:void(0)") Провайдеры
+					a.search-result__sort__btn.sort-btn(href="javascript:void(0)") Тарифы
+			.search-result__wrapper
+				.search-result__block
+					h4.search-result__block__title Обзоры
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+				.search-result__block
+					h4.search-result__block__title Провайдеры
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+				.search-result__block
+					h4.search-result__block__title Тарифы
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги
+					p
+						a.search-result__block__link(href="javascript:void(0)") Последний раз до этого команды играли в феврале 2016 года в 1/8 финала Лиги

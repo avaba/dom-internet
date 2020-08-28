@@ -1,0 +1,119 @@
+.input-wrap {
+	position: relative;
+	background-color: #fff;
+	border-radius: 5px;
+	&_error {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -1.5rem;
+		color: #ffffff;
+		border-radius: 2px;
+		background-color: rgba($red, 0.8);
+		font-size: 10px;
+		z-index: 2;
+		padding: 3px 8px;
+		white-space: nowrap;
+	}
+}
+
+.form-control {
+	border: none;
+	color: $dark;
+	font-size: 18px;
+	font-family: $lato-f;
+	position: relative;
+	z-index: 2;
+	border: 1px solid transparent;
+	transition: border-color .3s ease;
+	&:focus {
+		outline: none;
+		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+		border: 1px solid transparent;
+		background-color: transparent;
+	}
+	&[type="date"] {
+		opacity: 0;
+		cursor: text;
+		@media (max-width: $sw-xs-max) {
+			padding-top: 24px;
+		}
+		&.is-filled {
+			opacity: 1;
+		}
+		&:focus {
+			opacity: 1;
+		}
+	}
+	&.error {
+		border-color: $red;
+	}
+	&.is-filled.valid {
+		border-color: #27AE60;	
+	}
+	&__wrap {
+		position: relative;
+		border-radius: 4px;
+	}
+	&__placeholder {
+		position: absolute;
+		left: 2rem;
+		top: 50%;
+		transform: translateY(-50%);
+		color: $grey;
+		font-size: 18px;
+		transition: transform .1s linear, font-size .1s linear;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		transform-origin: 0 0;
+		justify-content: flex-start;
+		@media (max-width: $sw-sm-max) {
+			left: 2rem;
+		}
+	}
+	&[disabled] {
+		background-color: $white;
+		& + .form-control__placeholder {
+			color: #E0E0E0;
+		}
+	}
+	&__group {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@media (max-width: $sw-xs-max) {
+			flex-wrap: wrap;
+		}
+	}
+}
+input.form-control {
+	background-color: transparent;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+	border-radius: 4px;
+	height: 60px;
+	padding: 13px 20px 0 20px;
+	@media (max-width: $sw-xs-max) {
+		padding: 13px 18px 0 18px;
+	}
+	&:focus, &.is-filled {
+		& + .form-control__placeholder {
+			transform: translateY(-20px) scale(0.6);
+		}
+	}
+}
+
+input.form-control_lg {
+	padding: 13px 26px 0 26px;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+	@media (max-width: $sw-xs-max) {
+		padding: 13px 18px 0 18px;
+	}
+	& + .form-control__placeholder {
+		left: 2.6rem;
+		@media (max-width: $sw-sm-max) {
+			left: 2rem;
+		}
+	}
+}
