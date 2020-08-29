@@ -1,0 +1,15 @@
+mixin media-text(data)
+    .media-text
+        .container
+            h2.media-text__title!= data.title
+            .media-text__wrap
+                each item in data.items
+                    .media-item
+                        .media-item__img
+                            +svg(item.icon)
+                        .media-item__body
+                            h3.media-item__body-title!= item.body_title
+                            p.media-item__body-text!= item.body_text
+
+
+

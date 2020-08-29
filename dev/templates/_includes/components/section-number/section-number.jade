@@ -1,0 +1,8 @@
+mixin section-number(data)
+    .section-number
+        .container
+            .section-number__wrap
+                each item in data.items
+                    .section-number__wrap-col
+                        span.section-number__number!= item.number
+                        p.section-number__text!= item.text

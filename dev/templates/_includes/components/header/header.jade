@@ -4,7 +4,8 @@ mixin header(data)
 			.header__inner
 				button.header__menu-trigger(type="button")
 					+svg('icon-burger')
-				a.header__logo(href="javascript:void(0)") Dom#[span Internet].ru
+				a.header__logo(href="javascript:void(0)") 
+					+svg('logo') 
 				.city__choose
 					button(type="button").city__choose__trigger #[+svg('icon-location')] Санкт-Петербург #[+svg('icon-chevron-sm')]
 					.city__choose__dropdown
@@ -70,6 +71,6 @@ mixin search-field(data)
 			.search-field__inner
 				.search-field__icon
 					+svg('icon-search')
-				input.search-field__input(type="text", placeholder="Поиск")
+				input.search-field__input(type="text" placeholder="Поиск")
 				button.search-field__close(type="button")
 					+svg('icon-close')

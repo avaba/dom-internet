@@ -1,0 +1,15 @@
+mixin section-learn(data)
+    .section-learn
+        .container  
+            h2.section-title!= data.title
+            if data.placeholder
+                .hero-component__form
+                    form(action="javascript:void(0)")
+                        .form-control__wrap
+                            .input-wrap
+                                input.form-control.form-control_lg(type="text", required)
+                                span.form-control__placeholder!= data.placeholder
+                        button.btn.btn_shadowed.btn_md.btn_lgh(type="submit" class='' + data.button_class ? data.button_class : null)
+                            span!= data.submit_text
+            .section-learn__scrin
+                img(src="s/images/useful/scrin.png", alt="")                

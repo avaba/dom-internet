@@ -1,0 +1,44 @@
+$pfx: "media-text";
+
+.#{$pfx} {
+    padding: 100px 0;
+
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+.media-item {
+    display: grid;
+    grid-template-columns: 65px 1fr;
+    gap: 15px;
+
+    &__img {
+        text-align: center;
+
+        .icon {
+            width: 4em;
+            height: 4em;
+        }
+    }
+
+    &__body {
+        &-title {
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            color: $grey;
+            font-size: 14px;
+        }
+    }
+}

@@ -1,8 +1,10 @@
 mixin hero-component(data)
-	.hero-component(style="background-image: url(s/images/useful/#{data.img}.jpg)", class='' + data.hero_class ? data.hero_class : null)
+	.hero-component(style="background-image: url(s/images/useful/#{data.img}.jpg)" class='' + data.hero_class ? data.hero_class : null)
 		.container
 			.hero-component__inner
 				.hero-component__text
+					if data.subtitle
+						p.hero-component__subtitle!= data.subtitle
 					h1.hero-component__title!= data.title
 					if data.secondary
 						p.hero-component__secondary-text!= data.secondary
@@ -13,5 +15,5 @@ mixin hero-component(data)
 								.input-wrap
 									input.form-control.form-control_lg(type="text", required)
 									span.form-control__placeholder!= data.placeholder
-							button.btn.btn_shadowed.btn_md.btn_lgh(type="submit", class='' + data.button_class ? data.button_class : null)
+							button.btn.btn_shadowed.btn_md.btn_lgh(type="submit" class='' + data.button_class ? data.button_class : null)
 								span!= data.submit_text

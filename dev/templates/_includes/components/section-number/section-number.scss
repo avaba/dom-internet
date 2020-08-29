@@ -1,0 +1,26 @@
+$pfx: "section-number";
+
+.#{$pfx} {
+    background: #4DA3DA;
+    color: $white;
+    padding: 65px 0;
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+    }
+
+    &__number {
+        font-weight: bold;
+        font-size: 64px;
+        margin-bottom: 30px;
+        display: inline-block;
+    }
+
+    &__text {
+        color: $white;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}

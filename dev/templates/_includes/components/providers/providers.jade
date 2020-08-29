@@ -1,0 +1,19 @@
+mixin providers(data)
+    .providers
+        .container
+            h2.section-title!= data.title
+            each item in data.items
+                .providers-item
+                    .providers-item__img
+                        img(src="s/images/useful/#{item.img}" alt="")
+                    .providers-item__body    
+                        h3.providers-item__title!= item.title
+                        .providers-info
+                            each tarif in item.tarifs
+                                .providers-info__col
+                                    .providers-info__col-title!= tarif.title
+                                    .providers-info__col-text!= tarif.text
+                    .providers-item__button
+                        a.btn.btn_bordered(href="javascript:void(0)") Смотреть #[br]тарифы  
+            .button-more
+                button Еще             
