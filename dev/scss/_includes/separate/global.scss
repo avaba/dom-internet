@@ -1,4 +1,4 @@
-.l-wrapper{
+.l-wrapper {
 	position: relative;
 	min-height: 100vh;
 	overflow: hidden;
@@ -15,6 +15,7 @@ h1 {
 	font-size: 4.8rem;
 	line-height: 1.25;
 	font-weight: 700;
+
 	@media (max-width: $sw-xs-max) {
 		font-size: 3rem;
 		line-height: 1.4;
@@ -49,13 +50,15 @@ p {
 	color: $dark;
 }
 
-b, strong {
+b,
+strong {
 	font-weight: 700;
 }
 
 .section-title {
 	font-size: 4.8rem;
 	text-align: center;
+
 	@media (max-width: $sw-xs-max) {
 		font-size: 3rem;
 	}
@@ -66,6 +69,7 @@ b, strong {
 	text-align: center;
 	font-size: 1.8rem;
 	line-height: 1.8;
+
 	@media (max-width: $sw-sm-max) {
 		line-height: 1.6;
 	}
@@ -74,6 +78,7 @@ b, strong {
 // city choose
 .city__choose {
 	position: relative;
+
 	&.active {
 		.city__choose__dropdown {
 			opacity: 1;
@@ -81,29 +86,34 @@ b, strong {
 			transform: translateY(0);
 		}
 	}
+
 	&__trigger {
 		color: $blue;
-        font-weight: 700;
-        font-size: 1.6rem;
+		font-weight: 700;
+		font-size: 1.6rem;
 		line-height: 1.2;
 		cursor: pointer;
 		display: flex;
 		transition: color .3s ease;
-        align-items: center;
-        &:hover {
-            @media (min-width: $sw-sm-min) {
-                color: $dark;
-            }
-        }
-        .icon-location {
-            margin-right: 1rem;
-            font-size: 1.8rem;
-        }
-        .icon-chevron-sm {
-            font-size: 3px;
-            margin-left: 1rem;
-        }
+		align-items: center;
+
+		&:hover {
+			@media (min-width: $sw-sm-min) {
+				color: $dark;
+			}
+		}
+
+		.icon-location {
+			margin-right: 1rem;
+			font-size: 1.8rem;
+		}
+
+		.icon-chevron-sm {
+			font-size: 3px;
+			margin-left: 1rem;
+		}
 	}
+
 	&__dropdown {
 		background: $white;
 		box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -119,28 +129,33 @@ b, strong {
 		transition: opacity .3s ease, visibility .3s ease, transform .3s ease;
 		transform: translateY(15px);
 		z-index: 2;
-		& > span {
+
+		&>span {
 			font-size: 14px;
 			display: block;
 			margin-bottom: 17px;
 		}
 	}
+
 	&__links {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
 		.btn_blue {
 			width: 100px;
 			height: 40px;
 			flex-shrink: 0;
 			margin-right: 10px;
 		}
+
 		a {
 			font-size: 15px;
 			font-weight: 700;
 			color: $blue;
 			display: block;
 			text-align: center;
+
 			&:hover {
 				@media (min-width: $sw-sm-min) {
 					color: $dark;
@@ -149,3 +164,4 @@ b, strong {
 		}
 	}
 }
+

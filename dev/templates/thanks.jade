@@ -1,0 +1,72 @@
+extends _includes/_extends/main
+include _includes/components/subscribe/subscribe
+include _includes/components/blog/preview
+
+block head
+    +head({'title':'Страница благодарности'})
+
+block header
+    +header({call: true, close: false})
+
+block content
+    .thanks
+        .thanks-head
+            .container
+                h1.thanks-head__title Спасибо за обращение! #[br]Заявка на подключение принята
+                p.thanks-head__desc Специалист агрегатора перезвонит вам в течение 15 минут и договорится о времени подключения
+        .contact-phone
+            .container
+                .contact-phone__inner
+                    p.contact-phone__title Не хотите ждать звонкка? #[br]Позвоните нам сейчас!
+                    a.contact-phone__link(href="tel:88002004050")
+                        +svg('icon-phone')
+                        +svg('icon-phone-mobile')
+                        span 8 800 200-40-50
+        +subscribe({
+            subscribe_class: 'black-text',
+            title: 'Пока ждете звонка, подпишитесь на нашу рассылку.',
+            desc: 'Раз в месяц мы будем присылать вам полезные статьи про интернет, а также подборки новых акционных тарифов.',
+            placeholder: 'Ваш E-mail',
+            submit_text: 'Подписаться',
+            button_class: 'btn_pink'
+        })
+        .interesting
+            .container
+                h2.interesting__title Примеры материалов из рассылки
+                .blog__wrap
+                    +preview({
+                        items: [
+                            {
+                                img: 'preview',
+                                title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                                data: '15 января 2019',
+                                views: '312',
+                            },
+                            {
+                                img: 'preview',
+                                title: 'Самый большой агрегатор интернета в России',
+                                data: '15 января 2019',
+                                views: '312',
+                            },
+                            {
+                                img: 'preview',
+                                title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                                data: '15 января 2019',
+                                views: '312',
+                            },
+                        ]
+                    })
+                .button-more
+                    a(href="#") Cмотреть еще статьи
+        .social
+            .container
+                h2.social__title Подпишитесь на наши страницы в соцсетях
+                .social__wrap
+                    a(href="#") 
+                        img(src="s/images/useful/svg/vk.svg", alt="")
+                    a(href="#") 
+                        img(src="s/images/useful/svg/insta.svg", alt="")
+                    a(href="#") 
+                        img(src="s/images/useful/svg/zen.svg", alt="")
+                    a(href="#") 
+                        img(src="s/images/useful/svg/ok.svg", alt="")

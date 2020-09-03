@@ -1,0 +1,13 @@
+mixin preview(data)
+    each item in data.items
+        .preview
+            a.preview__img(href="#") 
+                img(src="s/images/useful/#{item.img}.jpg", alt="")
+            .preview__title
+                a(href="#")!= item.title
+            .preview__footer
+                span.preview__footer-data!= item.data
+                span.preview__footer-views
+                    +svg("views") 
+                    span!= item.views
+

@@ -1,0 +1,7 @@
+mixin tags(data)
+    .tags
+        .container
+            h2 Теги к статье
+            .tags__wrap
+                each item in data.items
+                        a.tags__item(href="#")!= item.title

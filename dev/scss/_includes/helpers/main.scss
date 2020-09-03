@@ -1,10 +1,12 @@
 html {
 	height: 100%;
 	font-size: 10px;
+
 	&.no-scroll {
 		overflow: hidden;
 	}
 }
+
 body {
 	position: relative;
 	-webkit-font-smoothing: antialiased;
@@ -12,6 +14,7 @@ body {
 	min-height: 100%;
 	min-width: 320px;
 	position: relative;
+
 	&:after {
 		content: '';
 		display: block;
@@ -20,15 +23,17 @@ body {
 		height: 100%;
 		left: 0;
 		top: 0;
-		background-color: rgba(0,0,0,.6);
+		background-color: rgba(0, 0, 0, .6);
 		z-index: 10;
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity .5s ease, visibility .5s ease;
 	}
+
 	&.filters-open {
 		@media (max-width: $sw-sm-max) {
 			overflow: hidden;
+
 			.filters-mobile__wrap {
 				transform: translateX(100%);
 				transition: transform .7s ease, opacity .4s ease, visibility .4s ease;
@@ -37,64 +42,82 @@ body {
 			}
 		}
 	}
+
 	&.menu-open {
 		@media (max-width: $sw-sm-max) {
 			overflow: hidden;
+
 			&:after {
 				opacity: 1;
 				visibility: visible;
 			}
+
 			.header__menu {
 				transform: translateX(540px);
 			}
 		}
 	}
+
 	// provider page custom styles
 	&.provider-1 {
 		.hero-component__form .btn {
 			background-color: $dark-orange;
 		}
+
 		.providers-selection__grid .icon {
 			color: $dark-orange;
 		}
+
 		.section-collapse__trigger {
 			color: $dark-orange;
 		}
+
 		.contact-phone {
 			&:after {
 				background-color: rgba(#273864, 0.8);
 			}
 		}
+
 		.request-section {
 			&:after {
 				background-color: rgba(#273864, 0.8);
 			}
 		}
+
 		.request-form {
 			.btn {
 				background-color: $dark-orange;
 			}
 		}
-		.filters__services__radio-group input:checked + .filters__services__radio-item {
+
+		.filters__services__radio-group input:checked+.filters__services__radio-item {
 			background-color: #273864;
 			border-color: #273864;
 		}
-		.filters__box__radio-group input:checked + .filters__box__radio-item {
+
+		.filters__box__radio-group input:checked+.filters__box__radio-item {
 			background-color: #273864;
 			border-color: #273864;
 		}
+
 		.filters__range .irs--round .irs-bar {
 			background-color: #273864;
 		}
+
 		.filters__range .irs--round .irs-handle:after {
 			background-color: #273864;
 		}
+
 		.tariff-block__promo {
 			background-color: $dark-orange;
 		}
-		.tariff-block__events .btn, .tariff-block__collapse__footer .btn, .tariff-block__left__content .tariff-block__btn-wrap .btn {
+
+		.tariff-block__events .btn,
+		.tariff-block__collapse__footer .btn,
+		.tariff-block__left__content .tariff-block__btn-wrap .btn {
 			border-color: $dark-orange;
 			color: $dark-orange;
+
 			&:hover {
 				@media (min-width: $sw-sm-min) {
 					background-color: $dark-orange;
@@ -102,55 +125,71 @@ body {
 				}
 			}
 		}
+
 		.tariff-block__title {
 			color: #273864;
 		}
 	}
+
 	&.provider-2 {
 		.hero-component__form .btn {
 			background-color: $dark-red;
 		}
+
 		.providers-selection__grid .icon {
 			color: $dark-red;
 		}
+
 		.section-collapse__trigger {
 			color: $dark-red;
 		}
+
 		.contact-phone {
 			&:after {
 				background-color: rgba(#000000, 0.6);
 			}
 		}
+
 		.request-section {
 			&:after {
 				background-color: rgba(#000000, 0.6);
 			}
 		}
+
 		.request-form {
 			.btn {
 				background-color: $dark-red;
 			}
 		}
-		.filters__services__radio-group input:checked + .filters__services__radio-item {
+
+		.filters__services__radio-group input:checked+.filters__services__radio-item {
 			background-color: #4A4A4A;
 			border-color: #4A4A4A;
 		}
-		.filters__box__radio-group input:checked + .filters__box__radio-item {
+
+		.filters__box__radio-group input:checked+.filters__box__radio-item {
 			background-color: #4A4A4A;
 			border-color: #4A4A4A;
 		}
+
 		.filters__range .irs--round .irs-bar {
 			background-color: #4A4A4A;
 		}
+
 		.filters__range .irs--round .irs-handle:after {
 			background-color: #4A4A4A;
 		}
+
 		.tariff-block__promo {
 			background-color: $dark-red;
 		}
-		.tariff-block__events .btn, .tariff-block__collapse__footer .btn, .tariff-block__left__content .tariff-block__btn-wrap .btn {
+
+		.tariff-block__events .btn,
+		.tariff-block__collapse__footer .btn,
+		.tariff-block__left__content .tariff-block__btn-wrap .btn {
 			border-color: $dark-red;
 			color: $dark-red;
+
 			&:hover {
 				@media (min-width: $sw-sm-min) {
 					background-color: $dark-red;
@@ -158,12 +197,57 @@ body {
 				}
 			}
 		}
+
 		.tariff-block__title {
 			color: #4A4A4A;
 		}
 	}
 }
-img{
+
+img {
 	max-width: 100%;
 	height: auto;
+}
+
+.button-more {
+	text-align: center;
+	margin-top: 40px;
+
+	button, a {
+		font-size: 18px;
+		color: $grey;
+		cursor: pointer;
+
+		&:hover {
+			color: $black;
+		}
+	}
+}
+
+blockquote {
+	background: rgba(77, 163, 218, 0.1) url(../images/useful/svg/blockquote.svg) no-repeat;
+	background-position: 30px center;
+	padding: 70px 80px;
+}
+
+.social {
+	margin: 50px 0;
+
+	&__title {
+		margin-bottom: 40px;
+	}
+
+	&__wrap {
+		display: flex;
+		align-items: center;
+
+		a {
+			display: inline-block;
+			margin-right: 35px;
+
+			&:hover {
+				opacity: .8;
+			}
+		}
+	}
 }

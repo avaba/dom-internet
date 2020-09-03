@@ -1,0 +1,76 @@
+extends _includes/_extends/main
+include _includes/components/blog/post-content
+include _includes/components/subscribe/subscribe
+include _includes/components/tags/tags
+include _includes/components/blog/preview
+
+block head
+    +head({'title':'Пост'})
+
+block header
+    +header({call: true, close: false})
+
+block content
+    .post
+        .container
+            .post__head
+                .post__head-data 15 января 2019
+                .post__head-views
+                    +svg("views")
+                    span 756
+            h2.blog__title Наши специалисты всегда готовы вам помочь с выбором интернета
+            .post__preview
+                .post__preview-img
+                    .post__preview-tag интернет
+                    img(src="s/images/useful/post-bg.png" alt="")
+                p.post__preview-title #[b С помощью него] можно легко подключить быстрый и надежный домашний интернет и ТВ по вашему адресу.
+        +post-content()
+        +subscribe({
+            img: 'subscribe.png',
+            title: 'Заголовок формы подписки на блог',
+            desc: 'Описание Актуальная база тарифов по адресам с ценами<br> и характеристиками от провайдеров',
+            placeholder: 'Ваш E-mail',
+            submit_text: 'Подписаться',
+            button_class: 'btn_pink'
+        })
+        +tags({
+            items: [
+                {
+                title:'интернет',
+                },
+                {
+                title:'провайдеры',
+                },
+                {
+                title:'тарифы',
+                },
+            ] 
+        })
+        .interesting
+            .container
+                h2.interesting__title Вам будет интересно
+                .blog__wrap
+                    +preview({
+                        items: [
+                            {
+                                img: 'preview',
+                                title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                                data: '15 января 2019',
+                                views: '312',
+                            },
+                            {
+                                img: 'preview',
+                                title: 'Самый большой агрегатор интернета в России',
+                                data: '15 января 2019',
+                                views: '312',
+                            },
+                            {
+                                img: 'preview',
+                                title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                                data: '15 января 2019',
+                                views: '312',
+                            },
+                        ]
+                    })
+                .button-more
+                    button Cмотреть еще статьи

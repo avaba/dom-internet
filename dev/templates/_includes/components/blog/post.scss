@@ -1,0 +1,114 @@
+$pfx: "post";
+
+.#{$pfx} {
+    &__head {
+        display: flex;
+        align-items: center;
+        margin-top: 60px;
+
+        &-data {
+            color: #828282;
+            margin-right: 90px;
+        }
+
+        &-views {
+            span {
+                font-weight: bold;
+                font-size: 16px;
+                margin-left: 4px;
+                display: inline-block;
+            }
+        }
+    }
+
+    .blog__title {
+        margin-top: 15px;
+        font-size: 4.8rem;
+    }
+
+    &__preview {
+        border-bottom: 1px solid #E0E0E0;
+        margin-bottom: 50px;
+
+        &-img {
+            position: relative;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        &-tag {
+            position: absolute;
+            display: inline-block;
+            background: #EE3C6B;
+            border-radius: 2px;
+            color: $white;
+            padding: 3px 15px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        &-title {
+            font-weight: bold;
+            font-size: 24px;
+            margin: 2em 0;
+
+            b {
+                color: #2e358f;
+            }
+        }
+    }
+}
+
+.#{$pfx}-inner {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .#{$pfx}-aside {
+        flex-shrink: 0;
+        width: 24rem;
+        padding-top: 1.5rem;
+        position: relative;
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            li {
+                &.active {
+                    a {
+                        color: $blue;
+                    }
+                }
+
+                a {
+                    font-size: 16px;
+                    line-height: 60px;
+                    color: #333;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .#{$pfx}-content {
+        width: calc(100% - 27.5rem);
+        margin-left: 3.5rem;
+    }
+}
+
+.interesting {
+    margin-bottom: 50px;
+
+    &__title {
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+}

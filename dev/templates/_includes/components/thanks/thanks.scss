@@ -1,0 +1,26 @@
+$pfx: "thanks";
+
+.#{$pfx} {}
+
+.#{$pfx}-head {
+    background: url(../images/useful/thanks-bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        font-size: 48px;
+        margin-bottom: 50px;
+    }
+
+    &__desc {
+        font-weight: bold;
+        font-size: 24px;
+        width: 542px;
+        max-width: 100%;
+    }
+}
+

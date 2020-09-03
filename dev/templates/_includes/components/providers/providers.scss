@@ -6,17 +6,6 @@ $pfx: "providers";
     .section-title {
         margin-bottom: 75px;
     }
-
-    .button-more {
-        text-align: center;
-        margin-top: 40px;
-
-        button {
-            font-size: 18px;
-            color: $grey;
-            cursor: pointer;
-        }
-    }
 }
 
 .#{$pfx}-item {

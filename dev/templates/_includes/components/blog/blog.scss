@@ -1,0 +1,116 @@
+$pfx: "blog";
+
+.#{$pfx} {
+    padding-bottom: 3em;
+
+    &__title {
+        margin: 60px 0;
+    }
+
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+    }
+
+    .preview {
+        &:first-of-type {
+            .preview__img {
+                height: 100%;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 27.02%, rgba(101, 101, 101, 0) 87.39%);
+                }
+
+                img {
+                    height: 100%;
+                    width: auto;
+                    max-width: none;
+                }
+            }
+
+            .preview__title {
+                a {
+                    color: $white;
+                }
+            }
+
+            .preview__footer {
+                color: $white;
+
+                &-data {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.preview {
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 30px;
+    position: relative;
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    transition: all .2s;
+
+    &:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        transition: all .2s;
+    }
+
+    &__img {
+        position: absolute;
+        height: 200px;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        margin: 30px 0;
+        position: relative;
+        z-index: 1;
+
+        a {
+            font-weight: bold;
+            font-size: 24px;
+            color: #333333;
+        }
+    }
+
+    &__footer {
+        margin-top: auto;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 1;
+
+        &-data {
+            color: #828282;
+        }
+
+        &-views {
+            span {
+                font-weight: bold;
+                font-size: 16px;
+                margin-left: 4px;
+                display: inline-block;
+            }
+        }
+    }
+}

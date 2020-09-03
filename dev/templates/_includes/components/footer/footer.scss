@@ -1,5 +1,7 @@
 .footer {
     background-color: $white;
+    border-top: 1px solid #E0E0E0;
+
     &__inner {
         display: flex;
         align-items: flex-start;

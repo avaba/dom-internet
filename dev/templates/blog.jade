@@ -1,0 +1,56 @@
+extends _includes/_extends/main
+include _includes/components/blog/preview
+
+block head
+    +head({'title':'Блог'})
+
+block header
+    +header({call: true, close: false})
+
+block content
+    .blog
+        .container
+            h1.blog__title Полезные статьи про интернет
+            .blog__wrap
+                +preview({
+                    items: [
+                        {
+                            img: 'preview',
+                            title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                            data: '15 января 2019',
+                            views: '312',
+                        },
+                        {
+                            img: 'preview',
+                            title: 'Самый большой агрегатор интернета в России',
+                            data: '15 января 2019',
+                            views: '312',
+                        },
+                        {
+                            img: 'preview',
+                            title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                            data: '15 января 2019',
+                            views: '312',
+                        },
+                        {
+                            img: 'preview',
+                            title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                            data: '15 января 2019',
+                            views: '312',
+                        },
+                        {
+                            img: 'preview',
+                            title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                            data: '15 января 2019',
+                            views: '312',
+                        },
+                        {
+                            img: 'preview',
+                            title: 'Можно легко подключить быстрый и надежный домашний интернет...',
+                            data: '15 января 2019',
+                            views: '312',
+                        },
+                    ]
+                })
+            .button-more
+                button Cмотреть еще статьи   
