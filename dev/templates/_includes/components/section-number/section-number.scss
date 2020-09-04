@@ -23,4 +23,11 @@ $pfx: "section-number";
         font-size: 14px;
         line-height: 1.4;
     }
+
+    @media (max-width: $sw-xs-max) {
+        &__wrap {
+            grid-template-columns: 100%;
+            text-align: center;
+        }
+    }
 }

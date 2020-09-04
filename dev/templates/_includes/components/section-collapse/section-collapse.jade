@@ -2,7 +2,7 @@ mixin section-collapse(data)
 	.section-collapse
 		.container
 			.section-title__wrap
-				h2.section-title Мы делаем поиск подходящей широкополосной связи, телевидения или мобильной связи простым делом
+				h2.section-title!= data.title
 			.section-collapse__inner
 				.collapse-block.active
 					button(type="button" data-toggle="collapse" data-target="#collapse_first" aria-expanded="false" aria-controls="collapse_first").section-collapse__trigger

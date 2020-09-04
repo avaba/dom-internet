@@ -213,7 +213,8 @@ img {
 	text-align: center;
 	margin-top: 40px;
 
-	button, a {
+	button,
+	a {
 		font-size: 18px;
 		color: $grey;
 		cursor: pointer;
@@ -228,6 +229,9 @@ blockquote {
 	background: rgba(77, 163, 218, 0.1) url(../images/useful/svg/blockquote.svg) no-repeat;
 	background-position: 30px center;
 	padding: 70px 80px;
+	@media (max-width: $sw-xs-max) {
+		padding: 30px;
+	}
 }
 
 .social {
@@ -249,5 +253,104 @@ blockquote {
 				opacity: .8;
 			}
 		}
+	}
+}
+
+.landing-page {
+	@media (max-width: $sw-sm-max) {
+		display: flex;
+		flex-wrap: wrap;
+		overflow: hidden;
+		width: 100%;
+
+		.hero-component {
+			order: 0;
+			width: 100%;
+		}
+
+		.media-text {
+			order: 1;
+			width: 100%;
+		}
+
+		.section-number {
+			order: 2;
+			width: 100%;
+		}
+
+		.section-simply {
+			order: 3;
+			width: 100%;
+		}
+
+		.providers {
+			order: 4;
+			width: 100%;
+		}
+
+		.section-learn {
+			order: 5;
+			width: 100%;
+		}
+
+		.section-collapse {
+			order: 6;
+			width: 100%;
+		}
+
+		.contact-phone {
+			order: 7;
+			width: 100%;
+		}
+
+		.section-best {
+			order: 8;
+			width: 100%;
+		}
+	}
+
+	@media (max-width: $sw-xs-max) {
+		.hero-component {
+			order: 0;
+		}
+
+		.media-text {
+			order: 1;
+		}
+
+		.section-number {
+			order: 2;
+		}
+
+		.providers {
+			order: 3;
+			padding-bottom: 0;
+		}
+
+		.section-simply {
+			order: 4;
+		}
+
+		.section-learn {
+			order: 5;
+		}
+
+		.section-collapse {
+			order: 6;
+		}
+
+		.contact-phone {
+			order: 7;
+		}
+
+		.section-best {
+			order: 8;
+		}
+	}
+}
+
+.btn_pink {
+	&:hover {
+		background: #ff0e4d;
 	}
 }

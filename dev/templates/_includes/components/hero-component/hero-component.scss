@@ -144,6 +144,26 @@
             font-size: 22px;
             line-height: 1.4;
         }
+
+        @media (max-width: $sw-sm-max) {
+            height: auto;
+            min-height: auto;
+            padding-top: 140px;
+        }
+
+        @media (max-width: $sw-xs-max) {
+            padding-bottom: 50px;
+
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            .hero-component__secondary-text {
+                display: block;
+                font-size: 16px;
+            }
+        }
     }
 
     // custom styles end

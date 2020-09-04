@@ -59,6 +59,45 @@ $pfx: "post";
             }
         }
     }
+
+    @media (max-width: $sw-sm-max) {
+        .blog__title {
+            text-align: left;
+        }
+
+        .review-aside {
+            display: none;
+        }
+
+        &__preview {
+            margin-bottom: 0;
+        }
+
+        .review-section {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .review-content__title {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: $sw-sm-max) {
+        .blog__title {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .post__preview-title {
+            font-size: 18px;
+        }
+    }
 }
 
 .#{$pfx}-inner {
@@ -110,5 +149,26 @@ $pfx: "post";
     &__title {
         font-size: 48px;
         margin-bottom: 50px;
+    }
+
+    @media (max-width: $sw-sm-max) {
+        .preview {
+            &:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        &__title {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .preview {
+            &:nth-of-type(3) {
+                display: block;
+            }
+        }
     }
 }

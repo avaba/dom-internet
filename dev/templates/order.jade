@@ -41,6 +41,7 @@ block content
                             +svg('icon-tv')
                             span.order-item__img-title Телевидение
                         .order-item__block
+                            span.order-item__block-title Кол-во каналов
                             span.order-item__block-big 240
                             span.order-item__block-small каналов
                         .order-item__block
@@ -61,24 +62,26 @@ block content
                 .order__wrap-col
                     .order-form
                         h3.order-form__title Стоимость
-                        .order-form__option
-                            .order-form__option-title Подключение:
-                            .order-form__option-sum 0 #[span руб. мес.]
-                        .order-form__option
-                            .order-form__option-title Тариф:
-                            .order-form__option-sum 650 #[span руб. мес.]
-                        .order-form__option
-                            .order-form__option-title Аренда Wi-Fi-роутера:
-                            .order-form__option-sum 120 #[span руб. мес.]
-                        .order-form__option
-                            .order-form__option-title Аренда приставки:
-                            .order-form__option-sum 120 #[span руб. мес.]
+                        .order-form__wrap
+                            .order-form__option
+                                .order-form__option-title Подключение:
+                                .order-form__option-sum 0 #[span руб. мес.]
+                            .order-form__option
+                                .order-form__option-title Тариф:
+                                .order-form__option-sum 650 #[span руб. мес.]
+                            .order-form__option
+                                .order-form__option-title Аренда Wi-Fi-роутера:
+                                .order-form__option-sum 120 #[span руб. мес.]
+                            .order-form__option
+                                .order-form__option-title Аренда приставки:
+                                .order-form__option-sum 120 #[span руб. мес.]
                         .order-form__total
                             .order-form__total-title Итого:
                             .order-form__total-sum 670 #[span руб.]
-                        input.order-form__input(type="text", placeholder="Ваше имя")    
-                        input.order-form__input(type="text", placeholder="Телефон")
-                        <button type="submit" class="btn btn_blue w-100">Подключить тариф</button>
+                        .order-form__input-wrap
+                            input.order-form__input(type="text" placeholder="Ваше имя")    
+                            input.order-form__input(type="text" placeholder="Телефон")
+                            <button type="submit" class="btn btn_blue w-100">Подключить тариф</button>
                         p.order-form__polit Отправляя заявку, вы соглашаетесь с #[a(href="#") политикой обработки персональных данных]
                         .order-form__operator #[+svg('phone-red')] Оператор позвонит Вам в ближайшее время для уточнения деталей и согласования даты и времени подключения
     +contact-phone()

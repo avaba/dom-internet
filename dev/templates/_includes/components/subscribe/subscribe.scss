@@ -18,13 +18,21 @@ $pfx: "subscribe";
         font-size: 18px;
     }
 
-    &.black-text &{
+    &.black-text & {
         &__title {
             color: $black;
         }
 
         &__desc {
             color: $black;
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        padding: 50px 0;
+
+        &__title {
+            font-size: 30px;
         }
     }
 }

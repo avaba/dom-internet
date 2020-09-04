@@ -1,7 +1,7 @@
 $pfx: "media-text";
 
 .#{$pfx} {
-    padding: 100px 0;
+    padding: 70px 0;
 
     &__title {
         text-align: center;
@@ -14,6 +14,16 @@ $pfx: "media-text";
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
+    }
+
+    @media (max-width: $sw-xs-max) {
+        &__title {
+            font-size: 26px;
+        }
+
+        &__wrap {
+            grid-template-columns: 100%;
+        }
     }
 }
 
@@ -40,5 +50,10 @@ $pfx: "media-text";
             color: $grey;
             font-size: 14px;
         }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        grid-template-columns: 100%;
+        text-align: center;
     }
 }

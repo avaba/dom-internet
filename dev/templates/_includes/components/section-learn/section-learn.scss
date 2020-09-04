@@ -14,4 +14,22 @@ $pfx: "section-learn";
         text-align: center;
         margin-top: 30px;
     }
+
+    @media (max-width: $sw-sm-max) {
+        padding-top: 60px;
+        
+        .section-title {
+            font-size: 4.7rem;
+        }
+
+        .btn {
+            white-space: normal;
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        .section-title {
+            font-size: 30px;
+        }
+    }
 }

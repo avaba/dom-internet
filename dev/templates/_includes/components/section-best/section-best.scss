@@ -17,6 +17,48 @@ $pfx: "section-best";
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px 40px;
+        margin-top: -100px;
+    }
+
+    .best-text__title {
+        width: 40%;
+    }
+
+    @media (max-width: $sw-sm-max) {
+        .best-text__title {
+            width: 100%;
+        }
+
+        .best-icon {
+            margin-top: 0;
+        }
+
+        .best-card {
+            width: 153px;
+        }
+
+        .best-card__text {
+            font-size: 19px;
+        }
+
+        .best-icon {
+            gap: 15px;
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        padding-bottom: 0;
+        background: $white;
+
+        &__wrap {
+            grid-template-columns: 100%;
+
+            &-col {
+                &:last-child {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
@@ -48,6 +90,7 @@ $pfx: "section-best";
     &__img {
         margin-bottom: 15px;
         text-align: center;
+
         svg {
             width: 5em;
             height: 5em;

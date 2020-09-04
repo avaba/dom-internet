@@ -8,6 +8,8 @@ $pfx: "section-simply";
 
     .section-title {
         margin-bottom: 45px;
+        position: relative;
+        z-index: 1;
     }
 
     &__wrap {
@@ -16,6 +18,52 @@ $pfx: "section-simply";
         &-col {
             width: 700px;
             max-width: 100%;
+        }
+    }
+
+    @media (max-width: $sw-sm-max) {
+        background-position: -100px bottom;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            left: 35%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0), white, white, white);
+        }
+
+        .media-text__wrap {
+            grid-template-columns: 100%;
+            width: 50%;
+        }
+
+        &__wrap-col {
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            z-index: 1;
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        background: $white;
+
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+
+        .media-text__wrap {
+            width: 100%;
+        }
+
+        .section-title {
+            margin-bottom: 0px;
         }
     }
 }

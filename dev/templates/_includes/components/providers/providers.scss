@@ -6,6 +6,13 @@ $pfx: "providers";
     .section-title {
         margin-bottom: 75px;
     }
+
+    @media (max-width: $sw-xs-max) {
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
 }
 
 .#{$pfx}-item {
@@ -18,6 +25,7 @@ $pfx: "providers";
 
     &__img {
         align-self: center;
+        text-align: center;
     }
 
     &__title {
@@ -32,16 +40,16 @@ $pfx: "providers";
         grid-template-columns: repeat(4, 1fr);
 
         &__col {
-            border-right: 1px solid #E0E0E0;
+            border-left: 1px solid #E0E0E0;
             padding: 0px 15px 20px 15px;
             margin-bottom: 7px;
 
             &:first-of-type {
                 padding-left: 0;
+                border: none;
             }
 
             &:last-of-type {
-                border: none;
                 padding-right: 0;
             }
 
@@ -61,6 +69,56 @@ $pfx: "providers";
                 }
             }
         }
+
+        @media (max-width: $sw-sm-max) {
+            grid-template-columns: repeat(2, 1fr);
+            row-gap: 15px;
+
+            &__col {
+                &:nth-of-type(odd) {
+                    padding-left: 0;
+                    border: none;
+                }
+            }
+        }
+
+        @media (max-width: $sw-xs-max) {
+            grid-template-areas:
+                'info1 info4'
+                'info2 info2'
+                'info3 info3';
+
+            &__col {
+                padding-bottom: 0;
+
+                &:nth-of-type(1) {
+                    grid-area: info1;
+                    padding-right: 0;
+                }
+
+                &:nth-of-type(2) {
+                    grid-area: info2;
+                    border-left: 0;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                &:nth-of-type(3) {
+                    grid-area: info3;
+                    border-left: 0;
+                    padding: 0;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                &:nth-of-type(4) {
+                    grid-area: info4;
+                }
+            }
+        }
     }
 
     &__button {
@@ -69,6 +127,20 @@ $pfx: "providers";
         .btn {
             width: 100%;
             padding: 13px 10px;
+        }
+    }
+
+    @media (max-width: $sw-sm-max) {
+        gap: 15px;
+        padding: 0px 15px 0px 18px;
+    }
+
+    @media (max-width: $sw-xs-max) {
+        grid-template-columns: 100%;
+        padding: 15px;
+
+        &__title {
+            text-align: center;
         }
     }
 }

@@ -10,6 +10,7 @@ $pfx: "thanks";
     min-height: 700px;
     display: flex;
     align-items: center;
+    position: relative;
 
     &__title {
         font-size: 48px;
@@ -22,5 +23,44 @@ $pfx: "thanks";
         width: 542px;
         max-width: 100%;
     }
-}
 
+    @media (max-width: $sw-sm-max) {
+        min-height: auto;
+        height: auto;
+        padding: 50px 0;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        &__title {
+            color: $white;
+            position: relative;
+            z-index: 1;
+            font-size: 30px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        &__desc {
+            color: $white;
+            position: relative;
+            z-index: 1;
+            font-weight: normal;
+            font-size: 16px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .container {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

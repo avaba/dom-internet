@@ -50,6 +50,22 @@ $pfx: "blog";
             }
         }
     }
+
+    @media (max-width: $sw-sm-max) {
+        &__wrap {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__title {
+            text-align: center;
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        &__wrap {
+            grid-template-columns: 100%;
+        }
+    }
 }
 
 .preview {
@@ -111,6 +127,16 @@ $pfx: "blog";
                 margin-left: 4px;
                 display: inline-block;
             }
+        }
+    }
+
+    @media (max-width: $sw-xs-max) {
+        width: 300px;
+        margin: 0 auto;
+        max-width: 100%;
+
+        &__title a {
+            font-size: 18px;
         }
     }
 }
